@@ -1,57 +1,100 @@
+AddDefaultCharset UTF-8
+Options -Indexes
+DefaultLanguage en
+
+<IfModule mod_mime.c>
+    AddType text/html .html
+    AddType application/json .json
+    # AddType text/plain .txt
+    # AddType text/markdown .md
+    # AddType application/xml .xml
+
+    AddType text/css .css
+    AddType text/javascript .js
+
+    AddType image/jpeg .jpeg .jpg .JPG
+    AddType image/png .png
+    AddType image/svg+xml .svg
+    AddType image/x-icon .ico
+    # AddType image/tiff .tiff .tif
+    # AddType image/gif .gif
+
+    AddType application/x-font-woff .woff
+    AddType application/x-font-woff .woff2
+    # AddType font/truetype .ttf
+    # AddType font/opentype .otf
+    # AddType font/eot .eot
+
+    # AddType application/zip .zip
+    # AddType application/pdf .pdf 
+    # AddType application/postscript .ai .eps
+
+    AddType video/mp4 .mp4
+    # AddType video/webm .webm
+    # AddType video/ogg .ogv
+</IfModule>
+
 # Kirby .htaccess
 
 # rewrite rules
 <IfModule mod_rewrite.c>
 
-# enable awesome urls. i.e.:
-# http://yourdomain.com/about-us/team
-RewriteEngine on
+    # enable awesome urls. i.e.:
+    # http://yourdomain.com/about-us/team
+    RewriteEngine on
 
-# make sure to set the RewriteBase correctly
-# if you are running the site in a subfolder.
-# Otherwise links or the entire site will break.
-#
-# If your homepage is http://yourdomain.com/mysite
-# Set the RewriteBase to:
-#
-# RewriteBase /mysite
+    # make sure to set the RewriteBase correctly
+    # if you are running the site in a subfolder.
+    # Otherwise links or the entire site will break.
+    #
+    # If your homepage is http://yourdomain.com/mysite
+    # Set the RewriteBase to:
+    #
+    # RewriteBase /mysite
 
-# In some environments it's necessary to
-# set the RewriteBase to:
-#
-# RewriteBase /
+    # In some environments it's necessary to
+    # set the RewriteBase to:
+    #
+    # RewriteBase /
 
-# block files and folders beginning with a dot, such as .git
-# except for the .well-known folder, which is used for Let's Encrypt and security.txt
-RewriteRule (^|/)\.(?!well-known\/) index.php [L]
+    # redirect favicon, sitemap, robots, ....
+    # RewriteRule ^favicon\.ico$ /assets/favicon/favicon.ico [L]
 
-# block text files in the content folder from being accessed directly
-RewriteRule ^content/(.*)\.(txt|md|mdown)$ index.php [L]
+    # block files and folders beginning with a dot, such as .git
+    # except for the .well-known folder, which is used for Let's Encrypt and security.txt
+    RewriteRule (^|/)\.(?!well-known\/) index.php [L]
 
-# block all files in the site folder from being accessed directly
-# except for requests to plugin assets files
-RewriteRule ^site/(.*) index.php [L]
+    # block text files in the content folder from being accessed directly
+    RewriteRule ^content/(.*)\.(txt|md|mdown)$ index.php [L]
 
-# Enable authentication header
-SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+    # block all files in the site folder from being accessed directly
+    # except for requests to plugin assets files
+    RewriteRule ^site/(.*) index.php [L]
 
-# block direct access to kirby and the panel sources
-RewriteRule ^kirby/(.*) index.php [L]
+    # Enable authentication header
+    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 
-# make site links work
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*) index.php [L]
+    # block direct access to kirby and the panel sources
+    RewriteRule ^kirby/(.*) index.php [L]
+
+    # make site links work
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*) index.php [L]
 
 </IfModule>
 
-# compress text file responses
+### compress text file responses
 <IfModule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/plain
-AddOutputFilterByType DEFLATE text/html
-AddOutputFilterByType DEFLATE text/css
-AddOutputFilterByType DEFLATE text/javascript
-AddOutputFilterByType DEFLATE application/json
-AddOutputFilterByType DEFLATE application/javascript
-AddOutputFilterByType DEFLATE application/x-javascript
+
+  <FilesMatch "\.(txt|html|md|css|js|json|xml)$" >
+    SetOutputFilter DEFLATE
+  </FilesMatch>
+
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot|svg)$" >
+    SetOutputFilter DEFLATE
+  </FilesMatch>
+
 </IfModule>
+
+### add caching later
