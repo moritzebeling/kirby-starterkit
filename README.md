@@ -51,4 +51,4 @@ php -S localhost:8000 kirby/router.php
 ```
 
 ## License
-This is just a custom edit of the official [Kirby Starterkit](https://github.com/getkirby/starterkit). [Buy](https://getkirby.com/buy) a license or read the [aggreement](https://getkirby.com/license).
+This is just a custom edit of the official [Kirby Starterkit](https://github.com/getkirby/starterkit). [Buy](https://getkirby.com/buy) a license or read the [agreement](https://getkirby.com/license).
