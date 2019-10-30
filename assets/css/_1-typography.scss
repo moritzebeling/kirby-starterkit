@@ -1,0 +1,14 @@
+html {
+    font-size: 1em;
+    font-family: $font;
+}
+
+h1, h2 {
+    font-size: $font-large;
+}
+body, h3, h4, h5, p {
+    font-size: $font-size;
+}
+h6 {
+    font-size: $font-small;
+}

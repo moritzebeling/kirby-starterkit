@@ -23,7 +23,7 @@ To run the page on a PHP server:
 php -S localhost:8000 kirby/router.php
 ```
 
-## Stack
+## Setup
 - VS Code
 - [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
 ```json
@@ -31,12 +31,12 @@ php -S localhost:8000 kirby/router.php
     "liveSassCompile.settings.formats":[
         {
             "format": "compressed",
-            "extensionName": ".css",
-            "savePath": "~/../css/"
+            "extensionName": ".css"
         }
     ],
     "liveSassCompile.settings.includeItems": [
-        "assets/scss/*.scss"
+        "assets/css/**.scss",
+        "site/plugins/**/assets/css/**.scss"
     ],
     "liveSassCompile.settings.excludeList": [ 
         "**/node_modules/**",

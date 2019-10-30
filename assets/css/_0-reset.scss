@@ -1,0 +1,161 @@
+// inspired by https://zellwk.com/blog/css-reset
+
+// Box Sizing
+html {
+	box-sizing: border-box;
+	font-weight: normal;
+	font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+nav,
+section,
+main,
+aside,
+header,
+footer,
+blockquote,
+figure {
+	display: block;
+}
+
+// Reset margins and paddings on most elements
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr,
+dd, dt, dl {
+	margin: 0;
+	padding: 0;
+}
+
+// lists
+ul, ol {
+	width: 100%;
+}
+ul, ol, li {
+	list-style: none;
+}
+li > a {
+	display: block;
+}
+
+// forms and buttons
+input,
+textarea,
+select,
+button {
+	color: inherit;
+	font: inherit;
+	letter-spacing: inherit;
+}
+
+input,
+textarea {
+	background-color: transparent;
+}
+
+input,
+textarea,
+button {
+	border: none;
+	padding: 0.5rem;
+}
+
+button {
+	border-radius: 0;
+	background-color: transparent;
+	display: inline-block;
+	outline: none;
+}
+
+button * {
+	pointer-events: none;
+}
+
+// links
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a, button, [type="button"], [type="submit"] {
+	cursor: pointer;
+}
+
+// typography
+body {
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong, b,
+blockquote {
+	font-weight: normal;
+}
+
+hr {
+	border: none;
+}
+
+// media elements
+embed,
+iframe,
+img,
+object,
+canvas,
+video {
+	display: block;
+	max-width: 100%;
+	border: none;
+	outline: none;
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+// tables
+table {
+	table-layout: fixed;
+	width: 100%;
+}
+
+// The hidden attribute
+[hidden] {
+	display: none !important;
+}
+
+// noscript styles
+noscript {
+	display: block;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}

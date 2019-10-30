@@ -1,0 +1,51 @@
+// https://sass-lang.com/documentation
+
+// reset
+@import '0-reset';
+
+//
+// fonts 
+//
+/*
+@font-face {
+	font-family: "Fontname";
+    src: url("../fonts/Fontname.woff2") format("woff2"),
+         url("../fonts/Fontname.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+ 
+//
+// variables
+//
+
+// colors
+$white: #fff;
+$black: #000;
+
+// typography
+$font: Helvetica, Arial, sans-serif;
+$font-size: 1rem;
+$font-small: 0.8rem;
+$font-medium: 1.6rem;
+$font-large: 2.8rem;
+
+// borders
+$border-style: solid;
+$border-width: 1px;
+$border: $border-width $border-style $black;
+
+//
+// modules
+//
+
+@import '1-typography';
+
+@import '2-layout';
+
+@import '3-navigation';
+
+@import '4-content';
+
+@import '5-theme';
