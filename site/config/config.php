@@ -8,5 +8,8 @@
  * All config options: https://getkirby.com/docs/reference/system/options
  */
 return [
-    'debug' => true,
+    'debug' => false,
+    'whoops' => false,
+    
+    'smartypants' => true,
 ];
