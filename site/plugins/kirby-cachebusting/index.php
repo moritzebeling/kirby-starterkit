@@ -9,7 +9,7 @@
 use Kirby\Cms\App;
 use Kirby\Cms\Url;
 
-Kirby::plugin('kirby/cache-busting', [
+Kirby::plugin('moritzebeling/kirby-cachebusting', [
 
 	'components' => [
 
