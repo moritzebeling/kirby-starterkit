@@ -50,5 +50,15 @@ php -S localhost:8000 kirby/router.php
 }
 ```
 
+## Differences from the official Starterkit
+- Kirby as submodule
+- Ignore `.lock` files
+- Extended `.htaccess` setup
+- Added boilerplate scss and `normalize.css`
+- Added boilerplate js
+- 2 config files for local and production
+- Added srcset in config
+- Added cachebusting plugin
+
 ## License
 This is just a custom edit of the official [Kirby Starterkit](https://github.com/getkirby/starterkit). [Buy](https://getkirby.com/buy) a license or read the [agreement](https://getkirby.com/license).
