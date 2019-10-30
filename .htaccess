@@ -97,4 +97,43 @@ DefaultLanguage en
 
 </IfModule>
 
-### add caching later
+### set browser caching
+<IfModule mod_expires.c>
+  ExpiresActive Off
+
+  # ExpiresByType text/html "access 1 day"
+  # ExpiresByType application/json "access 1 day"
+  # ExpiresByType text/plain "access 1 day"
+  # ExpiresByType text/markdown "access 1 day"
+  # ExpiresByType application/xml "access 1 day"
+
+  # ExpiresByType text/css "access 1 month"
+  # ExpiresByType text/javascript "access 1 month"
+  
+  # ExpiresByType image/jpeg "access 1 year"
+  # ExpiresByType image/png "access 1 year"
+  # ExpiresByType image/svg+xml "access 1 year"
+  # ExpiresByType image/x-icon "access 1 year"
+  # ExpiresByType image/tiff "access 1 year"
+  # ExpiresByType image/gif "access 1 year"
+
+  # ExpiresByType application/x-font-woff "access 1 year"
+  # ExpiresByType font/truetype "access 1 year"
+  # ExpiresByType font/opentype "access 1 year"
+  # ExpiresByType font/eot "access 1 year"
+
+  # ExpiresByType application/zip "access 1 year"
+  # ExpiresByType application/pdf  "access 1 year"
+  # ExpiresByType application/postscript "access 1 year"
+  # ExpiresByType application/unityweb "access 1 year"
+
+  # ExpiresByType audio/mpeg "access 1 year"
+  # ExpiresByType audio/x-wav "access 1 year"
+
+  # ExpiresByType video/mp4 "access 1 year"
+  # ExpiresByType video/webm "access 1 year"
+  # ExpiresByType video/ogg "access 1 year"
+  # ExpiresByType video/quicktime "access 1 year"
+
+  # ExpiresDefault "access 1 month"
+</IfModule>
