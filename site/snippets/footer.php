@@ -22,5 +22,7 @@
     <?php endif ?>
   </footer>
 
+  <?php echo js('assets/js/global.js'); ?>
+
 </body>
 </html>
