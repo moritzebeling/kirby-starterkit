@@ -9,6 +9,7 @@ Icon
 
 /media/*
 !/media/index.html
+.lock
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
