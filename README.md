@@ -16,6 +16,7 @@ Quickstart an new website using Kirby CMS on a PHP server
 - Added boilerplate `js`
 - Simplified `user.yml` blueprint
 - Adjusted `about.yml` page blueprint
+- Added `imprint.yml` blueprint and sample page
 
 ## Kirby
 - [Kirby GitHub](https://github.com/getkirby)
