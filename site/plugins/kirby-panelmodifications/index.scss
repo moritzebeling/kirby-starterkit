@@ -1,0 +1,49 @@
+//
+// add some styles to kirby panel
+//
+
+// highlight code blocks in info boxes
+.k-text {
+    pre {
+        background-color: rgba(120,120,120,0.1);
+        border-radius: 2px;
+        padding: 2px 5px;
+        margin-bottom: 1.5em;
+    }
+    p > code {
+        background-color: rgba(120,120,120,0.1);
+        border-radius: 2px;
+        padding: 0 3px;
+        display: inline-block;
+    }
+    code {
+        font-size: 110%;
+    }
+}
+
+// color all disabled fields grey
+.k-field[data-disabled] {
+    .k-card,
+    .k-list-item {
+        border: 1px solid #ccc;
+    }
+    .k-card,
+    .k-list-item,
+    .k-structure-table,
+    .k-image[data-back=white] span {
+        background-color: #efefef;
+    }
+    .k-structure-table {
+        border-top: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        th, td {
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+
+// make dialog box wider
+.k-dialog-box[data-size=medium] {
+    width: 80vw;
+}
