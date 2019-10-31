@@ -28,6 +28,8 @@ columns:
       pages:
         type: pages
         create: default
+        image:
+          back: white
         templates:
           - about
           - home
