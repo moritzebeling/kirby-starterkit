@@ -12,6 +12,7 @@ Quickstart an new website using Kirby CMS on a PHP server
 - Added srcset in config
 - Added plugin for asset cachebusting
 - Added plugin to add custom css to panel
+- Simplified user blueprint
 
 ## Kirby
 - [Kirby GitHub](https://github.com/getkirby)
