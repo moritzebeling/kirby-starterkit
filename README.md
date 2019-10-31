@@ -2,17 +2,20 @@
 Quickstart an new website using Kirby CMS on a PHP server
 
 ## Differences from the official Starterkit
-- Kirby as submodule
 - Gitignore `.lock` files
 - Extended `.htaccess` setup
-- Added boilerplate scss and `normalize.css`
-- Added boilerplate js
-- Adjusted `header.php` snippet to already include most important things and hints
+
+- Kirby as submodule
 - Created 2 config files for local and production
-- Added srcset in config
+- Added srcset in `config.php`
 - Added plugin for asset cachebusting
-- Added plugin to add custom css to panel
-- Simplified user blueprint
+- Added plugin to add custom `css` to panel
+
+- Adjusted `header.php` snippet to already include most important things and hints
+- Added boilerplate `scss` and `normalize.css`
+- Added boilerplate `js`
+- Simplified `user.yml` blueprint
+- Adjusted `about.yml` page blueprint
 
 ## Kirby
 - [Kirby GitHub](https://github.com/getkirby)

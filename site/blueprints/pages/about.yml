@@ -1,11 +1,6 @@
-# Each page blueprint must have a title, the title may be different from the file name
-title: About us
+title: About
+icon: phone
 
-# Each page can have an icon that is shown in page listings when no preview image is available.
-icon: ☎️
-
-# Limit the possible page statuses to `draft` and `listed`.
-# More about page statuses: https://getkirby.com/docs/reference/panel/blueprints/page#statuses
 status:
   draft: true
   listed: true
@@ -29,21 +24,37 @@ columns:
         size: huge
 
   - width: 1/2
-    # Kirby has many different field types, from simple text fields to the more complex structure field that contains subfields
-    # All available field types: https://getkirby.com/docs/reference/panel/fields
     fields:
       address:
         label: Address
         type: textarea
+        translate: false
+      zip:
+        label: Zip code
+        type: text
+        translate: false
+        width: 1/3
+      city:
+        label: City
+        type: text
+        width: 2/3
+        translate: false
+      country:
+        label: Country
+        type: text
+        translate: false
       email:
         label: Email
         type: email
+        translate: false
       phone:
         label: Phone
         type: tel
+        translate: false
       social:
         label: On the web
         type: structure
+        translate: false
         fields:
           platform:
             label: Platform
