@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
   <title><?= $site->title() ?> • <?= $page->title() ?></title>
+  
+  <link rel="canonical" href="<?= $page->url() ?>" />
 
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <meta name="subject" content="">
   <meta name="Generator" content="Kirby 3 (https://getkirby.com), Moritz Ebeling (https://moritzebeling.com)">
 
   <?= css([
@@ -19,10 +20,18 @@
 
   <?php
   /**
+   * Resources:
+   * https://htmlhead.dev/#recommended-minimum
+   * 
    * https://realfavicongenerator.net
-   * https://ogp.me
    * https://jsonld.com/json-ld-generator/
-   * <link rel="prefetch" href="...">
+   * https://ogp.me
+   * https://dev.twitter.com/cards/overview
+   * 
+   * https://css-tricks.com/prefetching-preloading-prebrowsing/
+   * 
+   * <link rel="alternate" href="<?= $page->url('en') ?>" hreflang="en">
+   * <link rel="alternate" href="<?= $page->url('de') ?>" hreflang="de">
    */
   ?>
 
