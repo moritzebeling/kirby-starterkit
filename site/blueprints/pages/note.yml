@@ -43,6 +43,7 @@ columns:
             type: date
             time: true
             default: now
+            translate: false
           author:
             type: users
           # Fields types can be added using the shortcut `fieldname: true`
@@ -54,6 +55,7 @@ columns:
             multiple: false
             info: "{{ page.images.count }} image(s)"
             empty: "No gallery selected"
+            translate: false
             image:
               cover: true
             # Use the `help` property of fields and section to provide editors with helpful information
