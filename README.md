@@ -7,7 +7,8 @@ Quickstart an new website using Kirby CMS on a PHP server
 - Extended `.htaccess` setup
 - Added boilerplate scss and `normalize.css`
 - Added boilerplate js
-- 2 config files for local and production
+- Adjusted `header.php` snippet to already include most important things
+- Created 2 config files for local and production
 - Added srcset in config
 - Added plugin for asset cachebusting
 - Added plugin to add custom css to panel
