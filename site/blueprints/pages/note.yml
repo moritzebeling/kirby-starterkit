@@ -6,7 +6,7 @@ title: Note
 num: date
 
 # Each page can have an icon that is shown in page listings when no preview image is available.
-icon: 📖
+icon: edit
 
 # Custom descriptions for each page status depending on use case
 # More about page status: https://getkirby.com/docs/reference/panel/blueprints/page#statuses

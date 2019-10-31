@@ -2,7 +2,7 @@
 title: Album
 
 # Each page can have an icon that is shown in page listings when no preview image is available.
-icon: 🖼
+icon: file-image
 
 # Page status can be limited, here to `draft` and `listed`.
 # More about page status: https://getkirby.com/docs/reference/panel/blueprints/page#statuses

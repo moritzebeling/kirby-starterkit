@@ -2,7 +2,7 @@
 title: Notes
 
 # Each page can have an icon that is shown in page listings when no preview image is available.
-icon: 📖
+icon: edit
 
 # Define the form layout with two columns
 # More about columns: https://getkirby.com/docs/guide/blueprints/layout#defining-columns
