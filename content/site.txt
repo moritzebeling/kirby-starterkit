@@ -1,1 +1,9 @@
-Title: Mægazine
+Title: Page Title
+
+----
+
+Tags: tag1, tag2, tag3
+
+----
+
+Description: Lorem Ipsum dolor sit amet
