@@ -1,0 +1,6 @@
+type: files
+headline: Uploads
+layout: list
+empty: No files uploaded yet
+image:
+  back: white

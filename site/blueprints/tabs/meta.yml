@@ -1,0 +1,20 @@
+columns:
+  - width: 1/2
+    sections:
+
+      fields1:
+        type: fields
+        fields:
+
+          tags: fields/tags
+
+          description: fields/description
+
+  - width: 1/2
+    sections:
+
+      fields2:
+        type: fields
+        fields:
+
+          thumbnail: fields/image

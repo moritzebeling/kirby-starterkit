@@ -1,0 +1,5 @@
+label: Image
+type: files
+multiple: false
+translate: false
+empty: No image selected yet

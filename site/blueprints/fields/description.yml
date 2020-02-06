@@ -1,0 +1,4 @@
+label: Description
+type: textarea
+buttons: false
+maxlength: 200
