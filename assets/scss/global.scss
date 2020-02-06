@@ -1,10 +1,11 @@
 // https://sass-lang.com/documentation
+// sass --watch --style=compressed assets/scss:assets/css
 
 // reset
 @import '0-reset';
 
 //
-// fonts 
+// fonts
 //
 /*
 @font-face {
@@ -15,7 +16,7 @@
 	font-style: normal;
 }
 */
- 
+
 //
 // variables
 //
@@ -23,6 +24,10 @@
 // colors
 $white: #fff;
 $black: #000;
+$blue: #00f;
+$red: #f00;
+$green: #0f0;
+$yellow: #ff0;
 
 // typography
 $font: Helvetica, Arial, sans-serif;

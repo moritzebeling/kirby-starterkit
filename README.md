@@ -33,37 +33,17 @@ If you need to re-add kirby as submodule:
 ```
 git submodule add https://github.com/getkirby/kirby kirby
 ```
+Update submodules
+```
+git submodule foreach git pull origin master
+```
 To run the page on a PHP server:
 ```
 php -S localhost:8000 kirby/router.php
 ```
 
 ## Setup
-- VS Code
-- [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
-```json
-    // VS Code settings.json for Live Sass Compiler
-    "liveSassCompile.settings.formats":[
-        {
-            "format": "compressed",
-            "extensionName": ".css"
-        }
-    ],
-    "liveSassCompile.settings.includeItems": [
-        "assets/css/**.scss",
-        "site/plugins/**/assets/css/**.scss"
-    ],
-    "liveSassCompile.settings.excludeList": [ 
-        "**/node_modules/**",
-        ".vscode/**" ,
-        "kirby/**"
-    ],
-    "liveSassCompile.settings.autoprefix": [
-        "> 1%",
-        "last 2 versions"
-    ]
-}
-```
+- Sass
 
 ## License
 This is just a custom edit of the official [Kirby Starterkit](https://github.com/getkirby/starterkit). [Buy](https://getkirby.com/buy) a license or read the [agreement](https://getkirby.com/license).
