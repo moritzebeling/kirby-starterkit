@@ -3,19 +3,19 @@
   <footer class="footer">
     <a href="<?= url() ?>">&copy; <?= date('Y') ?> / <?= $site->title() ?></a>
 
-    <nav class="menu">
-      <?php foreach ($site->children()->unlisted() as $item): ?>
-        <?= $item->title()->link() ?>
-      <?php endforeach ?>
-    </nav>
+    <?php snippet('navigation',[
+      'collection' => $site->children()->unlisted()
+    ]); ?>
 
     <?php if ($about = page('about')): ?>
     <nav class="social">
-      <?php foreach ($about->social()->toStructure() as $social): ?>
-      <a href="<?= $social->url() ?>"><?= $social->platform() ?></a>
+      <?php foreach ($about->social()->toStructure() as $link): ?>
+        <a href="<?= $link->url() ?>"><?= $link->platform() ?></a>
       <?php endforeach ?>
     </nav>
     <?php endif ?>
+
+    <?php snippet('languageSwitch'); ?>
 
   </footer>
 

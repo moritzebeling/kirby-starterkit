@@ -43,10 +43,6 @@
 
       <a class="logo" href="<?= $site->url() ?>"><?= $site->title() ?></a>
 
-      <nav id="menu" class="menu">
-        <?php foreach ($site->children()->listed() as $item): ?>
-          <?= $item->title()->link() ?>
-        <?php endforeach ?>
-      </nav>
+      <?php snippet('navigation'); ?>
 
     </header>

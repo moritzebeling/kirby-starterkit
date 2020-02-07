@@ -8,7 +8,7 @@ return [
   'name' => 'Deutsch',
   'url' => 'de',
   'slug' => [
-    'ß' => 'sz',
+    'ß' => 'ss',
     'ä' => 'ae',
     'ö' => 'oe',
     'ü' => 'ue',
