@@ -5,20 +5,17 @@ Quickstart an new website using Kirby CMS on a PHP server
 - Gitignore `.lock` files
 - Extended `.htaccess` setup
 - Kirby as submodule
-- Created 2 config files for local and production
-- Added srcset in `config.php`
+- Added boilerplate `scss` and `js`
 - Added plugin for asset cachebusting
 - Added plugin to add custom `css` to panel
-- Adjusted `header.php` snippet to already include most important things and hints
-- Added boilerplate `scss` and `normalize.css`
-- Added boilerplate `js`
-- Simplified `user.yml` blueprint
-- Adjusted `about.yml` page blueprint
-- Added `imprint.yml` blueprint and sample page
+- Basic blueprint setup
+- Basic site config
+- Languages enabled
+- Basic templates and snippets
 
 ## Kirby
-- [Kirby GitHub](https://github.com/getkirby)
 - [Kirby Website](https://getkirby.com)
+- [Kirby GitHub](https://github.com/getkirby)
 - [Kirby Reference](http://getkirby.com/docs/reference)
 - [Kirby Forum](https://forum.getkirby.com)
 - [This Starterkit template](https://github.com/moritzebeling/kirby-starterkit)
@@ -41,9 +38,13 @@ To run the page on a PHP server:
 ```
 php -S localhost:8000 kirby/router.php
 ```
+Run Sass watch
+```
+sass --watch --style=compressed assets/scss:assets/css
+```
 
 ## Setup
-- Sass
+- [Sass](https://sass-lang.com/install)
 
 ## License
 This is just a custom edit of the official [Kirby Starterkit](https://github.com/getkirby/starterkit). [Buy](https://getkirby.com/buy) a license or read the [agreement](https://getkirby.com/license).
