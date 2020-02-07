@@ -2,5 +2,6 @@
 
 return [
     'debug' => true,
-    'whoops' => true
+    'whoops' => true,
+    'cache' => false
 ];
