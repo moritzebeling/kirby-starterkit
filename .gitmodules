@@ -7,3 +7,6 @@
 [submodule "site/plugins/kirby-cachebusting"]
 	path = site/plugins/kirby-cachebusting
 	url = https://github.com/moritzebeling/kirby-cachebusting.git
+[submodule "site/plugins/sitemapper"]
+	path = site/plugins/sitemapper
+	url = https://gitlab.com/cre8ivclick/sitemapper.git
