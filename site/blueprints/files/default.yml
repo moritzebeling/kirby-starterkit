@@ -1,0 +1,22 @@
+title: Image
+
+fields:
+
+  title:
+    label: Title
+    type: text
+    width: 1/2
+    placeholder: '{{ file.filename }}'
+
+  credits:
+    label: Credits
+    type: text
+    before: '©'
+    translate: false
+    width: 1/2
+
+  caption:
+    type: textarea
+    label: Caption
+    maxlength: 300
+    buttons: false

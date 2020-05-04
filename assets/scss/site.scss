@@ -29,3 +29,10 @@ nav {
     }
   }
 }
+
+figcaption .credits {
+	opacity: 0.5;
+	&:before {
+		content: '©';
+	}
+}
