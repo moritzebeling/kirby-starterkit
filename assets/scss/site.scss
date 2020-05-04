@@ -1,0 +1,43 @@
+// sass --watch --style=compressed assets/scss:assets/css
+
+html {
+  font-size: 1em;
+  font-family: $font;
+}
+// font sizes
+body, h3, h4, h5, p {
+  font-size: $font-size;
+}
+h1, h2 {
+  font-size: $font-large;
+}
+h6 {
+  font-size: $font-small;
+}
+// others
+body {
+  line-height: 1.2;
+}
+
+html,
+body {
+	width: 100%;
+	min-height: 100%;
+}
+
+main {
+
+}
+
+nav {
+  a {
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+body {
+    background-color: $white;
+    color: $black;
+}
