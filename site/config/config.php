@@ -15,7 +15,7 @@ return [
     ],
   ],
 
-  'home' => 'work',
+  // 'home' => 'start',
 
   'languages' => true,
   'languages.detect' => true,
