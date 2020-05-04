@@ -19,7 +19,10 @@
 
   </footer>
 
-  <?php echo js('assets/js/site.js'); ?>
+  <?php echo js([
+    'assets/js/morutilities.js',
+    'assets/js/site.js',
+  ]); ?>
 
 </body>
 </html>
