@@ -19,7 +19,7 @@
 
   </footer>
 
-  <?php echo js('assets/js/global.js'); ?>
+  <?php echo js('assets/js/site.js'); ?>
 
 </body>
 </html>
