@@ -2,7 +2,7 @@
 Quickstart an new website using Kirby CMS on a PHP server
 
 ## Differences from the official Starterkit
-- Gitignore `.lock` files
+- Gitignore `.lock` files and `content` folder
 - Extended `.htaccess` setup
 - `Kirby` as submodule
 - Added boilerplate `scss` and `js`
