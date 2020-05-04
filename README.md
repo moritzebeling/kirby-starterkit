@@ -67,3 +67,4 @@ This is just a custom edit of the official [Kirby Starterkit](https://github.com
 [Stickybits](https://github.com/yowainwright/stickybits)
 [SmoothScroll](https://github.com/cferdinandi/smooth-scroll)
 [Svelte](https://svelte.dev)
+[Reflex Grid](http://reflexgrid.com/docs)
