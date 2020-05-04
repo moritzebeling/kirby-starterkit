@@ -6,6 +6,11 @@
 *
 * /
 
+/* console.log */
+function log( object ){
+	console.log( object );
+}
+
 /* on click */
 function onClick( selector, callFunction ){
 	const elements = document.querySelectorAll( selector );
