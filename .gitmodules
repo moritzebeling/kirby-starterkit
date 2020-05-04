@@ -1,3 +1,6 @@
 [submodule "kirby"]
 	path = kirby
 	url = https://github.com/getkirby/kirby
+[submodule "site/plugins/kirby-panelmodifications"]
+	path = site/plugins/kirby-panelmodifications
+	url = https://github.com/moritzebeling/kirby-panelmodifications.git
