@@ -8,9 +8,9 @@ return [
   'name' => 'Deutsch',
   'url' => 'de',
   'slug' => [
-    'ß' => 'ss',
     'ä' => 'ae',
     'ö' => 'oe',
     'ü' => 'ue',
+    'ß' => 'ss',
   ]
 ];
