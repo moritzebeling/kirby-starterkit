@@ -26,9 +26,11 @@ Click `Use this template` to create a new repo from this template, then:
 git clone --recursive {https://github.com/user/repo.git}
 cd {repo}
 ```
-If you need to re-add kirby as submodule:
+If you need to re-add submodules:
 ```
 git submodule add https://github.com/getkirby/kirby kirby
+git submodule add https://github.com/moritzebeling/kirby-cachebusting site/plugins/kirby-cachebusting
+git submodule add https://github.com/moritzebeling/kirby-panelmodifications site/plugins/kirby-panelmodifications
 ```
 Update submodules
 ```
@@ -38,13 +40,10 @@ To run the page on a PHP server:
 ```
 php -S localhost:8000 kirby/router.php
 ```
-Run Sass watch
+Compile Sass
 ```
 sass --watch --style=compressed assets/scss:assets/css
 ```
-
-## Setup
-- [Sass](https://sass-lang.com/install)
 
 ## License
 This is just a custom edit of the official [Kirby Starterkit](https://github.com/getkirby/starterkit). [Buy](https://getkirby.com/buy) a license or read the [agreement](https://getkirby.com/license).
