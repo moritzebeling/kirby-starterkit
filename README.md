@@ -2,16 +2,17 @@
 Quickstart an new website using Kirby CMS on a PHP server
 
 ## Differences from the official Starterkit
-- Gitignore `.lock` files and `content` folder
-- Extended `.htaccess` setup
 - `Kirby` as submodule
-- Added boilerplate `scss` and `js`
 - Added plugin for asset cachebusting
 - Added plugin to add custom `css` to panel
-- Basic `blueprint` setup
-- Basic site `config`
-- `Languages` enabled
+- Gitignore `.lock` files and `content` folder
+- Extended `.htaccess` setup
+- Basic `blueprint`
+- Basic `config`
+- `Languages` enabled and `en` as default
+- Sample `collection` and `controller`
 - Basic `templates` and `snippets`
+- Boilerplate `scss` and `js`
 
 ## Kirby
 - [Kirby Website](https://getkirby.com)
@@ -47,3 +48,14 @@ sass --watch --style=compressed assets/scss:assets/css
 
 ## License
 This is just a custom edit of the official [Kirby Starterkit](https://github.com/getkirby/starterkit). [Buy](https://getkirby.com/buy) a license or read the [agreement](https://getkirby.com/license).
+
+## GoLive Checklist
+- Srcset images
+- Lazyload images
+- OpenGraph meta tags
+- JsonLD Schema (structured data testing tool)
+- Google Page Speed
+- Varvy SEO and Speed test
+- technical SEO
+- is website vulnerable
+- https://themeisle.com/blog/website-launch-checklist
