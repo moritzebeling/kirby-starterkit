@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="<?= $page->kirby()->language()->code() ?>">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -33,6 +33,10 @@
    * <link rel="alternate" href="<?= $page->url('de') ?>" hreflang="de">
    */
   ?>
+
+  <?php foreach( $page->kirby()->languages() as $lang ): ?>
+    <link rel="alternate" href="<?= $page->url($lang->code()) ?>" hreflang="<?= $lang->code() ?>">
+  <?php endforeach; ?>
 
   <?php $jsonld = [
   	'@context' => 'https://schema.org/',
