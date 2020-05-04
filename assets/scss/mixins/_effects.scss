@@ -1,0 +1,6 @@
+@import '../variables';
+
+@mixin transition {
+	transition-duration: $transition-duration;
+	transition-timing-function: $transition-function;
+}

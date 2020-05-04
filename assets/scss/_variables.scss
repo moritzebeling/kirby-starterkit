@@ -1,10 +1,7 @@
 // colors
-$white: #fff;
-$black: #000;
-$blue: #00f;
-$red: #f00;
-$green: #0f0;
-$yellow: #ff0;
+$color: #000;
+$background: #fff;
+$border-color: #000;
 
 // typography
 $font: Helvetica, Arial, sans-serif;
@@ -16,4 +13,8 @@ $font-large: 2.8rem;
 // borders
 $border-style: solid;
 $border-width: 1px;
-$border: $border-width $border-style $black;
+$border: $border-width $border-style $border-color;
+
+// effect
+$transition-function: ease;
+$transition-duration: 200ms;

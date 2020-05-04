@@ -1,0 +1,18 @@
+@import '../variables';
+
+@mixin fixed {
+	position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: $background;
+}
+
+@mixin sticky {
+	position: -webkit-sticky;
+	position: sticky;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: $background;
+}

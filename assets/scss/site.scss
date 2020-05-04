@@ -1,32 +1,25 @@
 // sass --watch --style=compressed assets/scss:assets/css
 
-html {
-  font-size: 1em;
-  font-family: $font;
-}
-// font sizes
-body, h3, h4, h5, p {
-  font-size: $font-size;
-}
-h1, h2 {
-  font-size: $font-large;
-}
-h6 {
-  font-size: $font-small;
-}
-// others
-body {
-  line-height: 1.2;
-}
+@import 'variables';
 
 html,
 body {
 	width: 100%;
 	min-height: 100%;
 }
+html {
+  font-size: 1rem;
+}
+body {
+  color: $color;
+  background-color: $background;
+}
 
-main {
+@import 'components/typography';
 
+@import 'mixins/button';
+a {
+  @include button;
 }
 
 nav {
@@ -35,9 +28,4 @@ nav {
       font-weight: bold;
     }
   }
-}
-
-body {
-    background-color: $white;
-    color: $black;
 }
