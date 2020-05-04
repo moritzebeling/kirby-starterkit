@@ -4,3 +4,6 @@
 [submodule "site/plugins/kirby-panelmodifications"]
 	path = site/plugins/kirby-panelmodifications
 	url = https://github.com/moritzebeling/kirby-panelmodifications.git
+[submodule "site/plugins/kirby-cachebusting"]
+	path = site/plugins/kirby-cachebusting
+	url = https://github.com/moritzebeling/kirby-cachebusting.git
