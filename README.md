@@ -59,3 +59,11 @@ This is just a custom edit of the official [Kirby Starterkit](https://github.com
 - technical SEO
 - is website vulnerable
 - https://themeisle.com/blog/website-launch-checklist
+
+## Tools and libs
+[Lazysizes](https://github.com/aFarkas/lazysizes)
+[Hamburgers](https://github.com/jonsuh/hamburgers)
+[Swiper](https://swiperjs.com/api)
+[Stickybits](https://github.com/yowainwright/stickybits)
+[SmoothScroll](https://github.com/cferdinandi/smooth-scroll)
+[Svelte](https://svelte.dev)

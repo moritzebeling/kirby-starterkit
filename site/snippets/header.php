@@ -12,6 +12,7 @@
   <meta name="Generator" content="Kirby 3 (https://getkirby.com), Moritz Ebeling (https://moritzebeling.com)">
 
   <?= css([
+    'assets/css/reset.css',
     'assets/css/global.css',
     '@auto'
   ]) ?>
