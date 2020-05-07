@@ -34,7 +34,7 @@ If you need to re-add submodules:
 ```
 git submodule foreach git update --init
 ```
-or
+or individually with:
 ```
 git submodule add https://github.com/getkirby/kirby kirby
 git submodule add https://github.com/moritzebeling/kirby-cachebusting site/plugins/kirby-cachebusting
@@ -54,16 +54,6 @@ Compile Sass
 sass --watch --style=compressed assets/scss:assets/css
 ```
 
-## GoLive Checklist
-- Srcset images
-- Lazyload images
-- [OpenGraph](https://ogp.me) meta tags
-- JsonLD Schema [structured data testing tool](https://search.google.com/structured-data/testing-tool)
-- [Google Page Speed](https://developers.google.com/speed/pagespeed/insights)
-- [Varvy SEO](https://varvy.com) and [speed test](https://varvy.com/pagespeed)
-- [Technical SEO](https://technicalseo.com/tools)
-- https://themeisle.com/blog/website-launch-checklist
-
 ## Tools and libs
 - [Lazysizes](https://github.com/aFarkas/lazysizes) Lazyloading
 - [Hamburgers](https://github.com/jonsuh/hamburgers) Menü
@@ -73,3 +63,14 @@ sass --watch --style=compressed assets/scss:assets/css
 - [Svelte](https://svelte.dev) JS Framework
 - [Reflex Grid](http://reflexgrid.com/docs) CSS Flex Grid
 - [Pagetable](https://github.com/sylvainjule/kirby-pagetable) Kirby Panel section
+
+## GoLive Checklist
+- SSL, HTTPS/2, Keep Alive, Compression, Browser cache
+- Srcset images
+- Lazyload images
+- [OpenGraph](https://ogp.me) meta tags
+- JsonLD Schema [structured data testing tool](https://search.google.com/structured-data/testing-tool)
+- [Google Page Speed](https://developers.google.com/speed/pagespeed/insights)
+- [Varvy SEO](https://varvy.com) and [speed test](https://varvy.com/pagespeed)
+- [Technical SEO](https://technicalseo.com/tools)
+- https://themeisle.com/blog/website-launch-checklist
