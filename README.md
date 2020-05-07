@@ -57,12 +57,11 @@ sass --watch --style=compressed assets/scss:assets/css
 ## GoLive Checklist
 - Srcset images
 - Lazyload images
-- OpenGraph meta tags
-- JsonLD Schema (structured data testing tool)
+- [OpenGraph](https://ogp.me) meta tags
+- JsonLD Schema [structured data testing tool](https://search.google.com/structured-data/testing-tool)
 - [Google Page Speed](https://developers.google.com/speed/pagespeed/insights)
-- Varvy SEO and Speed test
-- technical SEO
-- is website vulnerable
+- [Varvy SEO](https://varvy.com) and [speed test](https://varvy.com/pagespeed)
+- [Technical SEO](https://technicalseo.com/tools)
 - https://themeisle.com/blog/website-launch-checklist
 
 ## Tools and libs
