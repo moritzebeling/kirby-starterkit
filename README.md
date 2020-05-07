@@ -66,8 +66,7 @@ sass --watch --style=compressed assets/scss:assets/css
 
 ## GoLive Checklist
 - SSL, HTTPS/2, Keep Alive, Compression, Browser cache
-- Srcset images
-- Lazyload images
+- Image Alt-Tags, Srcset and Lazyload
 - [OpenGraph](https://ogp.me) meta tags
 - JsonLD Schema [structured data testing tool](https://search.google.com/structured-data/testing-tool)
 - [Google Page Speed](https://developers.google.com/speed/pagespeed/insights)
