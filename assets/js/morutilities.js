@@ -11,6 +11,23 @@ function log( object ){
 	console.log( object );
 }
 
+/* dom query */
+function getFirst( s = 'body', parent = document ){
+  return parent.querySelector( s );
+}
+function getAll( s = '*', parent = document ){
+  return parent.querySelectorAll( s );
+}
+function getId( id, parent = document ){
+  return parent.getElementById( id );
+}
+function getClass( c, parent = document ){
+  return parent.getElementsByClassName( c );
+}
+function getTag( t, parent = document ){
+  return parent.getElementByTagName( t );
+}
+
 /* on click */
 function onClick( selector, callFunction ){
 	const elements = document.querySelectorAll( selector );
