@@ -30,11 +30,7 @@ Click `Use this template` to create a new repo from this template, then:
 git clone --recursive {https://github.com/user/repo.git}
 cd {repo}
 ```
-If you need to re-add submodules:
-```
-git submodule foreach git update --init
-```
-or individually with:
+If you need to re-add submodules, do:
 ```
 git submodule add https://github.com/getkirby/kirby kirby
 git submodule add https://github.com/moritzebeling/kirby-cachebusting site/plugins/kirby-cachebusting
