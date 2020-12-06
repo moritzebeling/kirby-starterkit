@@ -12,7 +12,11 @@ https://dev.twitter.com/cards/overview
 https://css-tricks.com/prefetching-preloading-prebrowsing/
 
 */
+
+$title = $page->isHomePage() ? $site->title() : $page->title() .' • '. $site->title();
+
 ?>
+<title><?= $title ?></title>
 
 <link rel="canonical" href="<?= $page->url() ?>" />
 <meta name="description" content="<?= $page->metaDescription() ?>">
@@ -23,11 +27,12 @@ https://css-tricks.com/prefetching-preloading-prebrowsing/
 <meta name="subject" content="<?= $site->description()->value() ?>">
 <meta name="geo.region" content="de">
 
-<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="<?= $title ?>">
 <meta property="og:description" content="<?= $page->metaDescription() ?>">
 <meta property="og:url" content="<?= $page->url() ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="<?= $site->title() ?>">
+<meta property="og:locale" content="de_DE">
 
 <?php if( $image = $page->ogImage() ): ?>
   <meta name="twitter:image" content="<?= $image->thumb('ogimage')->url() ?>">

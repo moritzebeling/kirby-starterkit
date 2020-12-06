@@ -2,13 +2,9 @@
 
 // https://getkirby.com/docs/reference/plugins/extensions
 
-require_once 'models/home.php';
-
 Kirby::plugin('moritzebeling/site', [
 
-  'pageModels' => [
-    'home' => 'HomePage',
-  ],
+  'pageModels' => [],
 
   'pageMethods' => [
     'metaDescription' => function (): string {
