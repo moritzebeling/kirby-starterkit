@@ -57,6 +57,14 @@ DefaultLanguage en
   #
   # RewriteBase /
 
+  # remove www and add https
+  # RewriteCond %{HTTP_HOST} ^www.example.com$ [NC]
+  # RewriteRule ^(.*)$ https://example.com/$1 [R=301,L]
+
+  # force https
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
   # redirect favicon, sitemap, robots, ....
   RewriteRule ^favicon\.ico$ /assets/favicon/favicon.ico [L]
 
