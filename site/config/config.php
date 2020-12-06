@@ -15,8 +15,6 @@ return [
     ],
   ],
 
-  // 'home' => 'start',
-
   'languages' => true,
   'languages.detect' => true,
 
@@ -26,19 +24,18 @@ return [
     'autoOrient' => false,
     'quality' => 80,
     'presets' => [
-      'small' =>  ['width' => 640, 'quality' => 80],
-			'medium' => ['width' => 1920, 'quality' => 80],
-			'large' =>  ['width' => 2560, 'quality' => 75],
-			'background' => ['width' => 3840, 'quality' => 70],
+      'mini' => ['width' => 64],
+      's' => ['width' => 426],
+			'm' => ['width' => 1280],
+			'l' => ['width' => 1920],
+			'xl' => ['width' => 2560],
+      'ogimage' => [ 'width' => 2000, 'height' => 2000, 'crop' => true, ],
     ],
-    // https://getkirby.com/docs/reference/objects/file/srcset
 		'srcsets' => [
-      // 16:9 ratios
-			'small' =>  [320, 426, 640],
-			'medium' => [426, 640, 854, 1280, 1920],
-			'large' =>  [640, 854, 1280, 1920, 2560],
-			'background' => [854, 1280, 1920, 2560, 3840],
-      'all' =>    [320, 426, 640, 854, 1280, 1920, 2560, 3840],
+			's' => [320, 426, 640],
+			'm' => [426, 640, 854, 1280],
+			'l' => [640, 854, 1280, 1920],
+			'xl' => [640, 854, 1280, 1920, 2560],
 		]
 	],
 ];
