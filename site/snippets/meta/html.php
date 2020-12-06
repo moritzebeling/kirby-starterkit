@@ -16,7 +16,7 @@ https://css-tricks.com/prefetching-preloading-prebrowsing/
 
 <link rel="canonical" href="<?= $page->url() ?>" />
 <meta name="description" content="<?= $page->metaDescription() ?>">
-<meta name="keywords" content="<?= $page->metaKeywords() ?>">
+<meta name="keywords" content="<?= implode(',',$page->metaKeywords()) ?>">
 
 <meta name="Generator" content="Moritz Ebeling (https://moritzebeling.com)">
 

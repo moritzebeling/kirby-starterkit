@@ -4,21 +4,38 @@
 
 require_once 'models/home.php';
 
-Kirby::plugin('moritzebeling/herbert', [
+Kirby::plugin('moritzebeling/site', [
 
   'pageModels' => [
     'home' => 'HomePage',
   ],
 
   'pageMethods' => [
-    'info' => function (): string {
-      if( $this->hasChildren() ){
-        return $this->children()->count() . ' posts';
-      } else if( $this->content()->date()->exists() ){
-        return $this->date()->toDate('d-m-Y');
-      }
-      return '';
-  	},
+    'metaDescription' => function (): string {
+
+			if( $this->description()->isNotEmpty() ){
+				return $this->description()->value();
+			}
+			return $this->site()->description()->value();
+
+		},
+		'metaKeywords' => function (): array {
+
+			$tags = array_unique( array_merge(
+				$this->tags()->split(),
+				$this->site()->tags()->split()
+			));
+			return array_slice( $tags, 0, 12 );
+
+		},
+		'ogImage' => function () {
+
+			if( $image = $this->image() ){
+				return $image;
+			}
+			return $this->site()->image();
+
+		},
   ],
 
   'pagesMethods' => [
@@ -92,7 +109,7 @@ Kirby::plugin('moritzebeling/herbert', [
       return $this->content()->caption();
 
   	},
-    'img' => function ( string $size = 'large' ): string {
+    'img' => function ( string $size = 'l' ): string {
 
   		return Html::tag( 'img', null, [
   			'src' => $this->thumb( $size )->url(),
