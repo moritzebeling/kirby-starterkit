@@ -17,7 +17,7 @@
     '@auto'
   ]) ?>
 
-  <?php snippet('header/favicon'); ?>
+  <?php snippet('meta/favicon'); ?>
 
   <?php
   /**
@@ -37,7 +37,7 @@
     <link rel="alternate" href="<?= $page->url($lang->code()) ?>" hreflang="<?= $lang->code() ?>">
   <?php endforeach; ?>
 
-  <?php snippet('header/jsonld'); ?>
+  <?php snippet('meta/jsonld'); ?>
 
 </head>
 <!-- This website was made by Moritz Ebeling (https://moritzebeling.com) -->
