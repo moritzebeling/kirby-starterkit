@@ -1,0 +1,18 @@
+title: Admin
+description: Can do everything
+
+permissions:
+  access:
+    *: true
+  files:
+    *: true
+  languages:
+    *: false
+  pages:
+    *: true
+  site:
+    *: true
+  user:
+    *: true
+  users:
+    *: true

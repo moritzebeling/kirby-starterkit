@@ -1,0 +1,28 @@
+title: Editor
+description: No language and user settings
+
+permissions:
+
+  access:
+    panel: true
+    site: true
+    settings: false
+    users: true
+
+  files:
+    *: true
+
+  languages:
+    *: false
+
+  pages:
+    *: true
+
+  site:
+    *: true
+
+  user:
+    *: true
+
+  users:
+    *: false
