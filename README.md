@@ -1,6 +1,7 @@
 # Custom Kirby Starterkit
 
-Quickstart an new website using Kirby CMS on a PHP server
+Quickstart an new website using Kirby CMS on a PHP server.
+This starterkit assumes, that you work with some kind of js frontend framework, e.g. Svelte.
 
 ## Start
 
@@ -17,10 +18,18 @@ git submodule foreach git pull origin master
 
 ## Development
 
-To run the page on a PHP server:
 ```
+# start local php server
 php -S localhost:8000 kirby/router.php
+
+# working on frontend
+cd assets/frontend
+npm run dev
 ```
+
+Place your frontend into `assets/frontend` and build to
+- `assets/frontend/build/bundle.js`
+- `assets/frontend/build/bundle.css`
 
 ## License
 

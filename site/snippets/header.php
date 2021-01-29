@@ -5,30 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <?php snippet('meta/html'); ?>
 
-  <?= css([
-    'assets/css/reset.css',
-    'assets/css/site.css',
-    '@auto'
-  ]) ?>
-
-  <?php snippet('meta/favicon'); ?>
+  <?= css('assets/frontend/build/bundle.css') ?>
+  <?= js('assets/frontend/build/bundle.js') ?>
 
   <?php foreach( $page->kirby()->languages() as $lang ): ?>
     <link rel="alternate" href="<?= $page->url($lang->code()) ?>" hreflang="<?= $lang->code() ?>">
   <?php endforeach; ?>
 
+  <?php snippet('meta/favicon'); ?>
   <?php snippet('meta/jsonld'); ?>
 
 </head>
 <!-- This website was made by Moritz Ebeling (https://moritzebeling.com) -->
-<body class="<?= $page->intendedTemplate()->name() ?>">
-
-  <div class="page">
-
-    <header class="header">
-
-      <a class="logo" href="<?= $site->url() ?>"><?= $site->title() ?></a>
-
-      <?php snippet('navigation'); ?>
-
-    </header>
+<body>

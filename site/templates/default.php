@@ -1,12 +1,9 @@
 <?php snippet('header') ?>
 
-<main>
-  <header class="intro">
-    <h1><?= $page->title() ?></h1>
-  </header>
-  <div>
-    <?= $page->text()->kirbytext() ?>
-  </div>
-</main>
+<h1>Welcome to <?= $site->title() ?></h1>
+
+<script>
+  window.siteData = <?= json_encode( $site->json() ) ?>;
+</script>
 
 <?php snippet('footer') ?>
