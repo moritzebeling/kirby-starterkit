@@ -10,3 +10,12 @@
 [submodule "site/plugins/sitemapper"]
 	path = site/plugins/sitemapper
 	url = https://gitlab.com/cre8ivclick/sitemapper.git
+[submodule "site/plugins/kirby-meta"]
+	path = site/plugins/kirby-meta
+	url = git@github.com:moritzebeling/kirby-meta.git
+[submodule "site/plugins/kirby-headless"]
+	path = site/plugins/kirby-headless
+	url = git@github.com:moritzebeling/kirby-headless.git
+[submodule "site/plugins/kirbytext-external-links"]
+	path = site/plugins/kirbytext-external-links
+	url = git@github.com:moritzebeling/kirbytext-external-links.git
