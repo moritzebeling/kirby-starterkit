@@ -8,7 +8,9 @@ columns:
 
           tags: fields/tags
 
-          description: fields/description
+          description:
+            extends: fields/description
+            maxlength: 200
 
   - width: 1/2
     sections:
@@ -17,4 +19,7 @@ columns:
         type: fields
         fields:
 
-          thumbnail: fields/image
+          ogimage:
+            extends: fields/image
+            label: OG Image
+            empty: No image uploaded yet

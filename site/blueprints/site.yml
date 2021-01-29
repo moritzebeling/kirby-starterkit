@@ -12,16 +12,13 @@ tabs:
 
           listed:
             extends: sections/pages
+            status: listed
 
       - width: 1/2
         sections:
 
           unlisted:
             extends: sections/pages
-            templates:
-              - default
-              - home
-              - about
-              - imprint
+            status: unlisted
 
   meta: tabs/meta

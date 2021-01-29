@@ -11,46 +11,6 @@ options:
   changeStatus: false
   duplicate: false
 
-columns:
-  - width: 1/1
-    fields:
+fields:
 
-      external_legal:
-        label: External legal information
-        type: url
-
-  - width: 1/2
-    fields:
-
-      imprint:
-        when:
-          external_legal:
-        label: Imprint
-        type: textarea
-        buttons:
-          - headlines
-          - italic
-          - '|'
-          - link
-          - email
-          - '|'
-          - ul
-          - ol
-
-  - width: 1/2
-    fields:
-
-      privacy:
-        when:
-          external_legal:
-        label: Privacy policy
-        type: textarea
-        buttons:
-          - headlines
-          - italic
-          - '|'
-          - link
-          - email
-          - '|'
-          - ul
-          - ol
+  text: fields/kirbytext

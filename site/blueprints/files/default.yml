@@ -15,8 +15,7 @@ fields:
     translate: false
     width: 1/2
 
-  caption:
-    type: textarea
-    label: Caption
+  description:
+    extends: fields/description
+    label: Image caption
     maxlength: 300
-    buttons: false

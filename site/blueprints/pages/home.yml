@@ -4,3 +4,17 @@ icon: globe
 options:
   changeStatus: false
   duplicate: false
+
+fields:
+
+  showMessage:
+    type: toggle
+    label: Show Message
+    text:
+      - "No"
+      - "Yes, show Announcement"
+
+  message:
+    type: text
+    when:
+      showMessage: true

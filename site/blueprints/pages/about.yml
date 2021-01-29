@@ -11,12 +11,12 @@ options:
   duplicate: false
 
 columns:
+
   - width: 1/2
     fields:
       text:
         extends: fields/description
         label: About
-        maxlength: false
 
   - width: 1/2
     fields:
@@ -26,37 +26,32 @@ columns:
         type: textarea
         translate: false
         buttons: false
+
       zip:
         label: Zip code
         type: text
         translate: false
         width: 1/3
+
       city:
         label: City
         type: text
         width: 2/3
         translate: false
+
       country:
         label: Country
         type: text
         translate: false
+
       email:
         label: Email
         type: email
         translate: false
+
       phone:
         label: Phone
         type: tel
         translate: false
-      social:
-        label: On the web
-        type: structure
-        translate: false
-        fields:
-          platform:
-            label: Platform
-            type: text
-            width: 1/2
-          url:
-            extends: fields/url
-            width: 1/2
+
+      social: fields/links

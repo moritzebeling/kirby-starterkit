@@ -1,0 +1,12 @@
+label: Content
+type: textarea
+buttons:
+  - headlines
+  - italic
+  - '|'
+  - link
+  - email
+  - file
+  - '|'
+  - ul
+  - ol
