@@ -2,8 +2,12 @@ Title: Site Title
 
 ----
 
-Tags: tag1, tag2, tag3
+Tags: 
 
 ----
 
-Description: Lorem Ipsum dolor sit amet
+Description: 
+
+----
+
+Thumbnail: 

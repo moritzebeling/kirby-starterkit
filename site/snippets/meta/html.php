@@ -21,11 +21,9 @@ $title = $page->isHomePage() ? $site->title() : $page->title() .' • '. $site->
 <link rel="canonical" href="<?= $page->url() ?>" />
 <meta name="description" content="<?= $page->metaDescription() ?>">
 <meta name="keywords" content="<?= implode(',',$page->metaKeywords()) ?>">
+<meta name="subject" content="<?= $site->metaDescription() ?>">
 
 <meta name="Generator" content="Moritz Ebeling (https://moritzebeling.com)">
-
-<meta name="subject" content="<?= $site->description()->value() ?>">
-<meta name="geo.region" content="de">
 
 <meta property="og:title" content="<?= $title ?>">
 <meta property="og:description" content="<?= $page->metaDescription() ?>">
@@ -35,7 +33,7 @@ $title = $page->isHomePage() ? $site->title() : $page->title() .' • '. $site->
 <meta property="og:locale" content="de_DE">
 
 <?php if( $image = $page->ogImage() ): ?>
-  <meta name="twitter:image" content="<?= $image->thumb('ogimage')->url() ?>">
-  <meta property="og:image" content="<?= $image->thumb('ogimage')->url() ?>">
-  <meta property="og:image:alt" content="<?= $site->title() ?>">
+	<meta name="twitter:image" content="<?= $image->thumb('ogimage')->url() ?>">
+	<meta property="og:image" content="<?= $image->thumb('ogimage')->url() ?>">
+	<meta property="og:image:alt" content="<?= $site->title() ?>">
 <?php endif ?>
