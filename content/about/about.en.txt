@@ -6,7 +6,7 @@ Text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy e
 
 ----
 
-Address: Street
+Address: Street 22
 
 ----
 
@@ -22,11 +22,15 @@ Country: Germany
 
 ----
 
-Email:
+Email: 
 
 ----
 
-Phone:
+Phone: 
+
+----
+
+Social: 
 
 ----
 
