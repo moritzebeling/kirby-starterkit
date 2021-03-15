@@ -1,63 +1,121 @@
+/* device */
+$device-s: 320px;
+// 320px
+$device-m: 580px;
+// 768px
+$device-l: 880px;
+// 1280px
+$device-xl: 1480px;
+// 1680px
+$device-xxl: 1900px;
+// 2560px
+
 /* colors */
 
-$black: #000;
-$white: #fff;
+$black: #1e1e1e;
+$grey: #ededed;
+$white: #ffffff;
+$blue: #0064ff;
 
-/* borders */
+$glass: rgba(0,0,0,0.03);
 
-@function border( $color: currentColor, $width: 1px, ){
-	@return $width solid $color;
+/* sizing */
+
+$unit: 1rem;
+
+@function size( $factor: 1 ){
+    @return $unit * $factor;
 }
 
-$border: border();
+$small3: size( 0.5 ); // 6px
+$small2: size( 1 ); // 12px
+$small: size( 3 ); // 36px
+$medium: size( 6 ); // 72px
+$large: size( 12 ); // 144px
+$large2: size( 18 ); // 216px
 
 /* fonts */
 
-@mixin sans {
-	font-family: 'Helvetica', Arial, sans-serif;
+@mixin regular {
+    font-family: 'Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
 }
-
-@mixin serif {
-	font-family: 'Times New Roman', Times, serif;
+@mixin italic {
+    font-family: 'Italic', sans-serif;
+    font-style: normal;
+    font-weight: normal;
 }
 
 /* typography */
 
-@mixin large {
-	font-size: 2rem;
-	line-height: 1.2;
+@mixin small2 {
+    font-size: size( 0.75 );
+    line-height: 1.2;
+    letter-spacing: 0.004em;
 }
-
-@mixin medium {
-	font-size: 1.5rem;
-	line-height: 1.3;
-}
-
 @mixin small {
-	font-size: 1rem;
-	line-height: 1.4;
+    font-size: size( 1.08 ); // 13px
+    line-height: 1.23; // 16px
+    letter-spacing: 0.004em;
+}
+@mixin medium {
+    font-size: size( 1.67 ); // 20px
+    line-height: 1.2; // 24px
+    letter-spacing: 0.002em;
+}
+@mixin large {
+    font-size: size( 2.5 ); // 30px
+    line-height: 1.2; // 36px
+    letter-spacing: 0.001em;
+}
+@mixin large2 {
+    font-size: size( 4.5 ); // 54px
+    line-height: 1.11; // 60px
+    letter-spacing: -0.004em;
+}
+@mixin large3 {
+    font-size: size( 7.58 ); // 91px
+    line-height: 1.05; // 96px
+    letter-spacing: -0.006em;
 }
 
-@mixin headline {
-	@include large;
+@mixin noSelect {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-@mixin text {
-	@include medium;
+@mixin hyphens {
+	-webkit-hyphens: auto;
+	hyphens: auto;
 }
 
-/* ui */
+/* forms */
 
-@mixin link {
-	&.active,
-	&:hover {
-		color: red;
-	}
+/* effects */
+
+@mixin transition( $property: opacity, $duration: 300ms, $easing: ease ){
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: $easing;
 }
 
-@mixin button {
-	display: inline-block;
-	border: $border;
-	border-radius: 2em;
-	padding: 0.5em 1em;
+@mixin fadeIn(){
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+/* layout */
+
+@mixin avoidColumnBreak {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+@mixin columns( $count: 2 ){
+    column-count: $count;
+    column-gap: size();
 }
