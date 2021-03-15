@@ -1,16 +1,14 @@
 <?php
 
-date_default_timezone_set('Europe/Berlin');
-
 return [
 	'locale' => 'en_US.utf-8',
 
-	'debug' => false,
-	'whoops' => false,
+	'debug' => true,
+	'whoops' => true,
 
 	'cache' => [
 		'pages' => [
-			'active' => true
+			'active' => false
 		],
 	],
 
