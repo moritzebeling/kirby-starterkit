@@ -23,7 +23,7 @@ $title = $page->isHomePage() ? $site->title() : $page->title() .' • '. $site->
 <meta name="keywords" content="<?= implode(',',$page->metaKeywords()) ?>">
 <meta name="subject" content="<?= $site->metaDescription() ?>">
 
-<meta name="Generator" content="Moritz Ebeling (https://moritzebeling.com)">
+<meta name="generator" content="Moritz Ebeling (https://moritzebeling.com)">
 
 <meta property="og:title" content="<?= $title ?>">
 <meta property="og:description" content="<?= $page->metaDescription() ?>">
