@@ -4,10 +4,13 @@ translate: false
 fields:
 
   title:
-    label: Title
+    label:
+      en: Title
+      de: Titel
     type: text
     width: 1/2
 
   url:
     extends: fields/url
     width: 1/2
+    required: true

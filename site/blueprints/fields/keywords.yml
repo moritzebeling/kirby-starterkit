@@ -1,3 +1,10 @@
-label: Keywords
+label:
+  en: Keywords
+  de: Schlagworte
 type: tags
 max: 10
+help:
+  en: To facilitate site search
+  de: Für interne Suche
+options: query
+query: site.index.pluck("keywords", ",", true)

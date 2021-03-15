@@ -1,0 +1,10 @@
+type: files
+label:
+  en: Files
+  de: Dateien
+empty:
+  en: No files selected yet
+  de: Noch keine Dateien ausgewählt
+image:
+  back: white
+  cover: true
