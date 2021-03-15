@@ -1,0 +1,63 @@
+/* colors */
+
+$black: #000;
+$white: #fff;
+
+/* borders */
+
+@function border( $color: currentColor, $width: 1px, ){
+	@return $width solid $color;
+}
+
+$border: border();
+
+/* fonts */
+
+@mixin sans {
+	font-family: 'Helvetica', Arial, sans-serif;
+}
+
+@mixin serif {
+	font-family: 'Times New Roman', Times, serif;
+}
+
+/* typography */
+
+@mixin large {
+	font-size: 2rem;
+	line-height: 1.2;
+}
+
+@mixin medium {
+	font-size: 1.5rem;
+	line-height: 1.3;
+}
+
+@mixin small {
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
+@mixin headline {
+	@include large;
+}
+
+@mixin text {
+	@include medium;
+}
+
+/* ui */
+
+@mixin link {
+	&.active,
+	&:hover {
+		color: red;
+	}
+}
+
+@mixin button {
+	display: inline-block;
+	border: $border;
+	border-radius: 2em;
+	padding: 0.5em 1em;
+}

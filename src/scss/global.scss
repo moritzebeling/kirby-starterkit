@@ -1,0 +1,28 @@
+@import 'reset';
+
+// @font-face {
+// 	font-family: 'Sans';
+// 	src: url('/fonts/Inter-Light.woff2') format('woff2'),
+// 		 url('/fonts/Inter-Light.woff') format('woff');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+@import 'mixins';
+
+html {
+	font-size: 1em;
+}
+body {
+	color: $black;
+	background-color: $white;
+}
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
+}

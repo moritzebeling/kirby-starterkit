@@ -1,6 +1,7 @@
 # Development
 # ------------
 
+/public/build/*
 node_modules
 vendor
 
