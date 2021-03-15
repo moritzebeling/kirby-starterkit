@@ -1,6 +1,10 @@
 type: pages
-headline: Pages
-empty: No pages created yet
+headline:
+  en: Pages
+  de: Seiten
+empty:
+  en: No pages created yet
+  de: Noch keine Unterseiten angelegt
 image:
   back: white
-  crop: true
+  cover: true

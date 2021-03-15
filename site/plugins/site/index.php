@@ -1,9 +1,3 @@
 <?php
 
-Kirby::plugin('moritzebeling/site', [
-
-	'pageModels' => [],
-
-	'pageMethods' => [],
-
-]);
+Kirby::plugin('moritzebeling/site', []);

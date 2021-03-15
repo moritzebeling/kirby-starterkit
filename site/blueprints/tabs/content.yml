@@ -1,0 +1,14 @@
+icon: page
+columns:
+
+  left:
+    width: 2/3
+    fields:
+
+  right:
+    width: 1/3
+    sections:
+
+      image: sections/image
+
+      uploads: sections/uploads

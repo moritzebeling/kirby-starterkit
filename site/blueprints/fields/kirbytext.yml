@@ -1,4 +1,6 @@
-label: Content
+label:
+  en: Content
+  de: Inhalt
 type: textarea
 buttons:
   - headlines

@@ -1,0 +1,5 @@
+label:
+  en: Description
+  de: Beschreibung
+type: textarea
+buttons: false

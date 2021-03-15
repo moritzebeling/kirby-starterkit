@@ -1,5 +1,7 @@
 title: Admin
-description: Can do everything
+description:
+  en: Can do everything
+  de: Kann alles
 
 permissions:
   access:

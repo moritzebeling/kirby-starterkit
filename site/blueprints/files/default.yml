@@ -3,7 +3,9 @@ title: Image
 fields:
 
   title:
-    label: Title
+    label:
+      en: Title/Alt-Text
+      de: Titel/Alt-Text
     type: text
     width: 1/2
     placeholder: '{{ file.filename }}'
@@ -17,5 +19,7 @@ fields:
 
   description:
     extends: fields/description
-    label: Image caption
+    label:
+      en: Image caption
+      de: Bildbeschreibung
     maxlength: 300

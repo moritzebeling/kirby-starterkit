@@ -1,6 +1,9 @@
 type: files
 headline: Uploads
 layout: list
-empty: No files uploaded yet
+empty:
+  en: No files uploaded yet
+  de: Noch keine Dateien hochgeladen
 image:
   back: white
+  cover: false

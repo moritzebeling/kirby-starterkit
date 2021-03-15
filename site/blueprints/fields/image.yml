@@ -1,5 +1,13 @@
-label: Image
+label:
+  en: Image
+  de: Bild
 type: files
 multiple: false
 translate: false
-empty: No image selected yet
+layout: cards
+empty:
+  en: No image selected yet
+  de: Noch kein Bild ausgewählt
+image:
+  cover: false
+  back: white

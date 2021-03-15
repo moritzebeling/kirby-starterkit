@@ -1,5 +1,7 @@
 title: Editor
-description: No language and user settings
+description:
+  en: No language and user settings
+  de: Kann keine Sprach- oder Nutzer-Einstellungen machen
 
 permissions:
 

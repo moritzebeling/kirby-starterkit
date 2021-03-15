@@ -4,6 +4,7 @@ tabs:
 
   index:
     label: Index
+    icon: dashboard
 
     columns:
 

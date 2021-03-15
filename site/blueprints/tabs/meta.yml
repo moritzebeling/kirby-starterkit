@@ -1,3 +1,4 @@
+icon: url
 columns:
   - width: 1/2
     sections:
@@ -6,10 +7,13 @@ columns:
         type: fields
         fields:
 
-          tags: fields/tags
+          tags:
+            extends: fields/tags
+            label: Meta keywords
 
           description:
-            extends: fields/description
+            extends: fields/textarea
+            label: Meta description
             maxlength: 200
 
   - width: 1/2
@@ -21,5 +25,4 @@ columns:
 
           ogimage:
             extends: fields/image
-            label: OG Image
-            empty: No image uploaded yet
+            label: Social Media preview image
