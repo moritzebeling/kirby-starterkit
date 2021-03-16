@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <?php snippet('meta/html'); ?>
+  <?php snippet('meta'); ?>
 
-  <?= css('assets/build/bundle.css') ?>
+  <?= css('build/bundle.css') ?>
 
   <?php foreach( $page->kirby()->languages() as $lang ): ?>
     <link rel="alternate" href="<?= $page->url($lang->code()) ?>" hreflang="<?= $lang->code() ?>">
   <?php endforeach; ?>
 
-  <?php snippet('meta/favicon'); ?>
-  <?php snippet('meta/jsonld'); ?>
+  <?php snippet('favicon'); ?>
+  <?php snippet('jsonld'); ?>
 
   <script>
     window.siteData = <?= json_encode( $site->json() ) ?>;
@@ -21,6 +21,6 @@
 </head>
 <!-- This website was made by Moritz Ebeling (https://moritzebeling.com) -->
 <body>
-  <?= js('assets/build/bundle.js') ?>
+  <?= js('build/bundle.js') ?>
 </body>
 </html>

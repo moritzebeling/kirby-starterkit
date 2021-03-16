@@ -1,0 +1,172 @@
+/* device */
+$device-s: 320px;
+// 320px
+$device-m: 580px;
+// 768px
+$device-l: 880px;
+// 1280px
+$device-xl: 1480px;
+// 1680px
+$device-xxl: 1900px;
+// 2560px
+
+/* colors */
+
+$black: #000;
+$grey: #eee;
+$white: #fff;
+$blue: #00f;
+
+/* sizing */
+
+$unit: 1rem;
+
+@function size( $factor: 1 ){
+    @return $unit * $factor;
+}
+
+$small3: size( 0.5 ); // 6px
+$small2: size( 1 ); // 12px
+$small: size( 3 ); // 36px
+$medium: size( 6 ); // 72px
+$large: size( 12 ); // 144px
+$large2: size( 18 ); // 216px
+
+/* fonts */
+
+@mixin regular {
+    font-family: 'Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+@mixin italic {
+    font-family: 'Italic', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* typography */
+
+@mixin small2 {
+    font-size: size( 0.75 );
+    line-height: 1.2;
+    letter-spacing: 0.004em;
+}
+@mixin small {
+    font-size: size( 1.08 ); // 13px
+    line-height: 1.23; // 16px
+    letter-spacing: 0.004em;
+}
+@mixin medium {
+    font-size: size( 1.67 ); // 20px
+    line-height: 1.2; // 24px
+    letter-spacing: 0.002em;
+}
+@mixin large {
+    font-size: size( 2.5 ); // 30px
+    line-height: 1.2; // 36px
+    letter-spacing: 0.001em;
+}
+@mixin large2 {
+    font-size: size( 4.5 ); // 54px
+    line-height: 1.11; // 60px
+    letter-spacing: -0.004em;
+}
+@mixin large3 {
+    font-size: size( 7.58 ); // 91px
+    line-height: 1.05; // 96px
+    letter-spacing: -0.006em;
+}
+
+@mixin select {
+    background-color: $blue;
+}
+
+@mixin noSelect {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin upper {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+@mixin tnum {
+	@include upper;
+	font-variant-numeric: tabular-nums;
+	-moz-font-feature-settings: "tnum";
+	-webkit-font-feature-settings: "tnum";
+	font-feature-settings: "tnum";
+}
+
+@mixin hyphens {
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+/* ui elements */
+
+@mixin rounded {
+    border-radius: 0.5rem;
+}
+
+
+@mixin buttonPadding {
+    padding: 0.3em 0.6em;
+}
+
+@mixin button {
+    @include paddingButton;
+    @include rounded;
+    @include hover;
+}
+
+@mixin field {
+    @include rounded;
+    @include paddingButton;
+}
+
+
+/* effects */
+
+@mixin hover(){
+    background-color: #eee;
+    color: #000;
+    @extend transition;
+    transition-property: color, background-color;
+    &:hover {
+        background-color: #000;
+        color: #eee;
+    }
+}
+
+@mixin transition( $property: opacity, $duration: 300ms, $easing: ease ){
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: $easing;
+}
+
+@mixin animation( $animation: fade-in, $duration: 1s, $count: 1 ){
+    animation-name: $animation;
+    animation-duration: $duration;
+    animation-iteration-count: $count;
+}
+
+@mixin fadeIn(){
+    @include animation( fade-in );
+}
+
+/* layout */
+
+@mixin avoidColumnBreak {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+@mixin columns( $count: 2 ){
+    column-count: $count;
+    column-gap: size();
+}
