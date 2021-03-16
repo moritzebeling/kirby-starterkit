@@ -1,17 +1,11 @@
 <script>
 
-    import { Link } from "svelte-routing";
+    import Link from "./Link.svelte";
 
 </script>
 
 <footer>
-
 </footer>
 
 <style lang="scss">
-
-    footer {
-        padding: 1rem;
-    }
-
 </style>

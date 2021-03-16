@@ -1,4 +1,8 @@
-export async function loadJson( url ){
+export async function load( path ){
+
+    const url = `/json/${path}`;
+    console.log( url );
+
     const res = await fetch( url );
 
     const data = await res.json();

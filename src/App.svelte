@@ -1,9 +1,10 @@
 <script>
 	import { Router, Link, Route } from "svelte-routing";
-	import Debug from './templates/debug/index.svelte';
+	import Default from './templates/default/index.svelte';
+	import Debug from './components/Debug.svelte';
 
 	let templates = {
-		debug: Debug
+		default: Default
 	};
 
 	export let data;
@@ -12,12 +13,17 @@
 
 <Router url="{url}">
 
-	{#each data.listed.concat( data.unlisted ) as page}
-		{#if page.template in templates}
-			<Route path={page.path} component={templates[page.template]} {page} />
+	{#each data.listed.concat( data.unlisted ) as item}
+		{#if item.template in templates}
+			<Route path={item.path} component={templates[item.template]} {item} />
+		{:else}
+			<Route path={item.path} component={Default} {item} />
 		{/if}
 	{/each}
-	<Route path="*" component={Debug} page={data} />
+
+	<Route path="*" />
+
+	<Debug {data} />
 
 </Router>
 

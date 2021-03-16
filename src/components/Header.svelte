@@ -1,18 +1,16 @@
 <script>
 
-    import { Link } from "svelte-routing";
+    import Link from "./Link.svelte";
 
-    let pages = [
-        ['/','Start']
-    ];
+    export let pages = [];
 
 </script>
 
 <header>
 
     <nav class="main">
-        {#each pages as [path,title]}
-            <Link to="{path}">{title}</Link>
+        {#each pages as page}
+            <Link to="{page.path}">{page.title}</Link>
         {/each}
     </nav>
 

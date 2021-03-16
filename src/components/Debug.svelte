@@ -1,10 +1,10 @@
 <script>
 
-    export let page;
+    export let data;
 
 </script>
 
-<pre>{JSON.stringify( page, null, 2 )}</pre>
+<pre>{JSON.stringify( data, null, 2 )}</pre>
 
 <style lang="scss">
 
