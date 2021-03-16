@@ -9,15 +9,16 @@
 // }
 
 @import 'mixins';
+@import 'animations';
+
+html {
+	font-size: 14px;
+}
 
 :root {
 	--full-height: 100vh;
 	--header-height: 1rem;
 	--unit: size();
-}
-
-html {
-	font-size: 1em;
 }
 
 body {

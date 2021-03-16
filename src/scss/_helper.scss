@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .lazyload,
 .lazyloading {
 	opacity: 0;
@@ -5,4 +7,13 @@
 .lazyloaded {
 	opacity: 1;
 	transition: opacity 300ms;
+}
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
+::selection {
+	@include select;
 }

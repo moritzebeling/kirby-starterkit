@@ -1,14 +1,17 @@
 <script>
 	import { Router, Link, Route } from "svelte-routing";
-	import Default from './templates/default/index.svelte';
 	import Debug from './components/Debug.svelte';
+	import Helpers from './components/Helpers.svelte';
+	export let url = "";
 
+	/* templates */
+	import Default from './templates/default/index.svelte';
 	let templates = {
 		default: Default
 	};
 
+	/* site data */
 	export let data;
-	export let url = "";
 </script>
 
 <Router url="{url}">
