@@ -1,0 +1,45 @@
+{
+    "name": "moritzebeling/kirby-starterkit",
+    "description": "Moritzebeling Kirby Starterkit",
+    "type": "project",
+    "keywords": [
+        "kirby",
+        "starterkit",
+        "website"
+    ],
+    "authors": [
+        {
+            "name": "Bastian Allgeier",
+            "email": "bastian@getkirby.com",
+            "homepage": "https://getkirby.com"
+        },
+        {
+            "name": "Moritz Ebeling",
+            "homepage": "https://moritzebeling.com"
+        }
+    ],
+    "homepage": "https://github.com/moritzebeling/kirby-starterkit",
+    "support": {
+        "issues": "https://github.com/moritzebeling/kirby-starterkit/issues",
+        "forum": "https://forum.getkirby.com",
+        "source": "https://github.com/getkirby/starterkit"
+    },
+    "require": {
+        "php": ">=8.0.0 <8.3.0",
+        "getkirby/cms": "^3.9",
+        "moritzebeling/kirby-cachebusting": "^2.0",
+        "moritzebeling/kirby-favicon": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        },
+        "optimize-autoloader": true
+    },
+    "scripts": {
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php -S localhost:8000 kirby/router.php"
+        ]
+    }
+}
