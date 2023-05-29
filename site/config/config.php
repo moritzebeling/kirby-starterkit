@@ -1,10 +1,24 @@
 <?php
 
-return [
-	'locale' => 'en_US.utf-8',
+use Kirby\Toolkit\Str;
 
-	'debug' => true,
-	'whoops' => true,
+Str::$language = [
+	'ä' => 'ae',
+	'ö' => 'oe',
+	'ü' => 'ue',
+	'ß' => 'ss',
+	't’s' => 'ts',
+	'n’t' => 'nt',
+	't\'s' => 'ts',
+	'n\'t' => 'nt',
+];
+
+return [
+
+	'locale' => 'en_GB.utf-8',
+
+	'debug' => false,
+	'whoops' => false,
 
 	'cache' => [
 		'pages' => [
@@ -12,26 +26,28 @@ return [
 		],
 	],
 
-	'languages' => true,
-	'languages.detect' => true,
-
 	'smartypants' => true,
 
 	'thumbs' => [
-		'autoOrient' => false,
-		'quality' => 80,
-		'presets' => [
-			'mini' => ['width' => 64],
-			's' => ['width' => 426],
-			'm' => ['width' => 1280],
-			'l' => ['width' => 1920],
-			'xl' => ['width' => 2560],
-		],
-		'srcsets' => [
-			's' => [320, 426, 640],
-			'm' => [426, 640, 854, 1280],
-			'l' => [640, 854, 1280, 1920],
-			'xl' => [640, 854, 1280, 1920, 2560],
-		]
-	],
+        // 'format' => 'webp',
+        'autoOrient' => true,
+        'quality' => 80,
+        'presets' => [
+            'xl' => ['width' => 2600],
+            'l' =>  ['width' => 2000],
+            'm' =>  ['width' => 1200],
+            's' =>  ['width' =>  640],
+            'xs' => ['width' =>  480],
+        ],
+        'srcsets' => [
+            'default' => [
+                '480w' =>  ['width' =>  480],
+                '640w' =>  ['width' =>  640],
+                '1200w' => ['width' => 1200],
+                '2000w' => ['width' => 2000],
+                '2600w' => ['width' => 2600],
+            ]
+        ]
+    ],
+
 ];
