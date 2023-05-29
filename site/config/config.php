@@ -26,6 +26,10 @@ return [
 		],
 	],
 
+    'panel' => [
+        'favicon' => 'assets/favicon/favicon.png',
+    ],
+
 	'smartypants' => true,
 
 	'thumbs' => [
