@@ -1,5 +1,0 @@
-type: fields
-fields:
-
-  titleImage:
-    extends: fields/image

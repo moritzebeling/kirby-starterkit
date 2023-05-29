@@ -1,4 +1,4 @@
 type: files
 image:
   back: white
-  cover: true
+  cover: false

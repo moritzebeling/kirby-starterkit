@@ -1,13 +1,7 @@
-label:
-  en: Image
-  de: Bild
 type: files
 multiple: false
-translate: false
+max: 1
 layout: cards
-empty:
-  en: No image selected yet
-  de: Noch kein Bild ausgewählt
 image:
   cover: false
   back: white

@@ -11,15 +11,49 @@ tabs:
       - width: 1/2
         sections:
 
-          listed:
+          pages:
             extends: sections/pages
-            status: listed
+
+  settings:
+    icon: cog
+    columns:
+      - width: 1/2
+        fields:
+
+          menu:
+            extends: fields/pages
+            label: Menu
+          
+          menuFooter:
+            extends: fields/pages
+            label: Footer-Menu
 
       - width: 1/2
-        sections:
+        fields:
 
-          unlisted:
-            extends: sections/pages
-            status: unlisted
+          contact:
+            type: object
+            fields:
 
-  meta: tabs/meta
+              company:
+                type: text
+              address:
+                type: writer
+                inline: true
+              zip:
+                type: text
+                width: 1/3
+              city:
+                type: text
+                width: 2/3
+              country:
+                type: text
+              email:
+                type: email
+              phone:
+                type: tel
+
+          links:
+            extends: fields/links
+
+  help: tabs/help

@@ -1,0 +1,4 @@
+type: tags
+options:
+  type: query
+  query: site.index.pluck("tags", ",", true)

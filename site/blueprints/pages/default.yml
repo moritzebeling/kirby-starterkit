@@ -1,23 +1,14 @@
-title:
-  en: Simple Page
-  de: Einfache Seite
-
+title: Default page
 icon: page
 
 preset: page
 
-status:
-  draft: true
-  unlisted:
-    label: Hidden Page
-    text: The page is not listed in the main menu
-  listed:
-    label: Menu Page
-    text: The page is listed in the main menu
-
 pages:
-  template: default
+  extends: sections/pages
+
+files:
+  extends: sections/files
 
 fields:
-  text:
-    type: textarea
+  blocks:
+    extends: fields/blocks

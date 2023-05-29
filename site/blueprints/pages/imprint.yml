@@ -1,18 +1,6 @@
-title:
-  en: Imprint
-  de: Impressum
-icon: phone
-
-status:
-  draft: true
-  listed: true
-
-options:
-  changeSlug: false
-  delete: false
-  changeStatus: false
-  duplicate: false
+title: Imprint
 
 fields:
 
-  text: fields/kirbytext
+  text:
+    type: writer

@@ -1,13 +1,7 @@
-label:
-  en: Content
-  de: Seiteninhalt
 type: blocks
-empty:
-  en: Empty content. Click here to start...
-  de: Hier klicken um neue Inhalte hinzuzufügen
 fieldsets:
-  - text
   - heading
+  - text
   - image
   - gallery
   - quote

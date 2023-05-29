@@ -1,16 +1,9 @@
 label: Links
 type: structure
-translate: false
 fields:
 
   title:
-    label:
-      en: Title
-      de: Titel
     type: text
-    width: 1/2
 
   url:
-    extends: fields/url
-    width: 1/2
     required: true

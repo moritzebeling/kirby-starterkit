@@ -1,0 +1,32 @@
+label: Help
+icon: question
+sections:
+  
+  help_images:
+    type: info
+    headline: Bilder
+    theme: white
+    text: |
+      Bilder können grundsätzlich in beliebiger Größe hochgeladen werden. Optimal ist aber:
+      Format: JPG
+      Farbraum: RGB
+      Abmessungen: 1500 - 3000px an der langen Seite
+      Dateigröße: 300KB - 2MB
+  
+  help_hyperlinks:
+    type: info
+    headline: Links
+    theme: white
+    text: |
+      Interne Links müssen immer mit einem / anfangen, zB. "/" (Startseite) oder "/info"
+      Externe Links müssen immer mit https:// anfangen, zB. "https://example.com". "example.com" oder "www.example.com" sind keine gültigen URLs.
+
+  help_typography:
+    type: info
+    headline: Typografie
+    theme: white
+    text: |
+      Neuer Absatz mit Abstand oder Einrückung: (enter)
+      Neue Zeile ohne Abstand oder Einrückung: (shift+enter)
+      Gedankenstrich: – (alt+minus), immer umgeben von Leerzeichen
+      Genderform: Besser Studierende als Student:innen

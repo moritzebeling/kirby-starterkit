@@ -1,10 +1,4 @@
 type: pages
-headline:
-  en: Pages
-  de: Seiten
-empty:
-  en: No pages created yet
-  de: Noch keine Unterseiten angelegt
 image:
   back: white
   cover: true
