@@ -1,0 +1,25 @@
+{
+    "name": "moritzebeling/kirby-cachebusting",
+    "description": "Kirby Cachebusting plugin",
+    "license": "MIT",
+    "type": "kirby-plugin",
+    "version": "2.0.0",
+    "homepage": "https://github.com/moritzebeling/kirby-cachebusting",
+    "authors": [
+        {
+            "name": "Moritz Ebeling",
+            "homepage": "https://github.com/moritzebeling"
+        },
+        {
+			"name": "Kirby Team",
+			"email": "support@getkirby.com",
+			"homepage": "https://getkirby.com"
+		}
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    },
+    "support": {
+        "issues": "https://github.com/moritzebeling/kirby-cachebusting/issues"
+    }
+}
