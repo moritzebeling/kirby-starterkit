@@ -1,0 +1,118 @@
+/* grid */
+
+@mixin grid-columns($columns: 12) {
+    grid-template-columns: repeat($columns, minmax(0, 1fr));
+}
+
+@mixin loop-grid($i, $device: '') {
+    @if $i >0 {
+        &.grid#{$device}-#{$i} {
+            @include grid-columns($i );
+        }
+
+        @include loop-grid($i - 1, $device );
+    }
+}
+
+@mixin loop-columns($i, $device: '') {
+    @if $i >0 {
+        >.col#{$device}-#{$i} {
+            grid-column-end: span max($i );
+        }
+
+        @include loop-columns($i - 1, $device );
+    }
+}
+
+@mixin loop-rows($i, $device: '') {
+    @if $i >0 {
+        >.row#{$device}-#{$i} {
+            grid-row-end: span max($i );
+        }
+
+        @include loop-rows($i - 1, $device );
+    }
+}
+
+@mixin loop-order($i, $device: '') {
+    @if $i >0 {
+        >.order#{$device}-#{$i} {
+            order: max($i );
+        }
+
+        @include loop-order($i - 1, $device );
+    }
+
+    @else {
+        >.order#{$device}-unset {
+            order: unset;
+        }
+    }
+}
+
+@mixin loop-start($i, $device: '') {
+    @if $i >0 {
+        >.start#{$device}-#{$i} {
+            grid-column-start: max($i );
+        }
+
+        @include loop-start($i - 1, $device );
+    }
+
+    @else {
+        >.start#{$device}-unset {
+            grid-column-start: unset;
+        }
+    }
+}
+
+@mixin grid($columns: 12, $gap: 1rem) {
+
+    display: grid;
+    @include grid-columns($columns );
+    gap: $gap;
+
+    >* {
+        grid-column-end: span $columns;
+    }
+
+    $rows: 4;
+
+    @include loop-grid($columns );
+    @include loop-columns($columns );
+    @include loop-order($columns );
+    @include loop-start($columns );
+    @include loop-rows($rows );
+
+    @include md {
+        @include loop-grid($columns, '-m');
+        @include loop-columns($columns, '-m');
+        @include loop-order($columns, '-m');
+        @include loop-start($columns, '-m');
+        @include loop-rows($rows, '-m');
+    }
+
+    @include lg {
+        @include loop-grid($columns, '-l');
+        @include loop-columns($columns, '-l');
+        @include loop-order($columns, '-l');
+        @include loop-start($columns, '-l');
+        @include loop-rows($rows, '-l');
+    }
+
+    @include xl {
+        @include loop-grid($columns, '-xl');
+        @include loop-columns($columns, '-xl');
+        @include loop-order($columns, '-xl');
+        @include loop-start($columns, '-xl');
+        @include loop-rows($rows, '-xl');
+    }
+
+    @include xxl {
+        @include loop-grid($columns, '-xxl');
+        @include loop-columns($columns, '-xxl');
+        @include loop-order($columns, '-xxl');
+        @include loop-start($columns, '-xxl');
+        @include loop-rows($rows, '-xxl');
+    }
+}

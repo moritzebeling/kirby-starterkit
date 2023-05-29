@@ -10,6 +10,12 @@ npm install
 2. Block content folder
 
 - Add `/content` to .gitignore
-- git rm --cached content -r
+- `git rm --cached content -r`
 
 3. Rename `site/config/config.localhost.php` to match your local hostname
+
+4. Clone [CSS boilerplate](https://github.com/moritzebeling/css-boilerplate)
+
+```
+git clone git@github.com:moritzebeling/css-boilerplate.git assets/scss
+```

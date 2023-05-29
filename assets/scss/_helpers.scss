@@ -1,0 +1,80 @@
+/* helpers global */
+
+.no {
+    &-scrolling {
+        @include no-scrolling;
+    }
+    &-select {
+        @include no-select;
+    }
+    &-cursor {
+        cursor: none !important;
+    }
+    &-js .only-js {
+        display: none;
+    }
+}
+
+.only {
+    &-print {
+        @include screen {
+            display: none;
+        }
+    }
+}
+
+/* helpers layout */
+
+.grid {
+    @include grid;
+}
+
+/* helpers typography */
+
+.font {
+
+    &-sans {
+        @include font;
+    }
+
+    &-mono {
+        @include font(mono);
+    }
+
+    $sizes: xs, s, m, l, xl, xxl;
+
+    @each $s in $sizes {
+        &-#{$s} {
+            @include size($s );
+        }
+    }
+
+}
+
+pre {
+    @include padding(m);
+    @include font(mono);
+    overflow-x: scroll;
+}
+
+code {
+    @include font(mono);
+}
+
+p {
+    a {
+        @include underline;
+    }
+
+    strong {
+        @include bold;
+    }
+
+    em {
+        @include italic;
+    }
+
+    u {
+        @include underline;
+    }
+}

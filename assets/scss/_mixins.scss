@@ -1,0 +1,221 @@
+/* mixins */
+
+@use "sass:color";
+@use "sass:math";
+@use "sass:map";
+@use "sass:list";
+
+/* mixins colors */
+
+$black: #000;
+$white: #fff;
+$blue: #00f;
+$red: #f00;
+
+/* mixins borders */
+
+@function border($color: currentColor, $thickness: 1px) {
+    @return $thickness solid $color;
+}
+
+@mixin border($side: bottom, $color: currentColor, $thickness: 1px) {
+
+    $sides: top,
+    right,
+    bottom,
+    left;
+
+    @if list.index($sides, $side ) {
+        border-#{$side}: border($color, $thickness );
+    }
+
+    @else {
+        border: border($color, $thickness );
+    }
+}
+
+/* mixins typography */
+
+@mixin font($style: sans) {
+    @if $style ==mono {
+        font-family: "Roboto Mono", monospace;
+    }
+
+    @else {
+        font-family: "Roboto", sans-serif;
+    }
+}
+
+@mixin bold {
+    font-weight: 700;
+}
+
+@mixin italic {
+    font-style: italic;
+    // transform: skewX(-10deg);
+}
+
+@mixin uppercase {
+    text-transform: uppercase;
+}
+
+@mixin size($size: m) {
+    @if $size ==xs {
+        font-size: 0.6rem;
+        line-height: 1.3;
+    }
+
+    @else if $size ==s {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    @else if $size ==l {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    @else if $size ==xl {
+        font-size: 2.8rem;
+        line-height: 1;
+    }
+
+    @else if $size ==xxl {
+        font-size: 5.6rem;
+        line-height: 1;
+    }
+
+    @else {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+}
+
+@mixin hyphens {
+    -webkit-hyphenate-limit-chars: auto 9;
+    -webkit-hyphenate-limit-lines: 2;
+    -ms-hyphenate-limit-chars: auto 9;
+    -ms-hyphenate-limit-lines: 1;
+    hyphens: auto;
+}
+
+@mixin underline($color: currentColor, $thickness: 1px, $offset: 0.2em) {
+    text-decoration: underline;
+    text-decoration-color: $color;
+    text-decoration-thickness: $thickness;
+    text-underline-offset: $offset;
+}
+
+@mixin tnum {
+    font-feature-settings: "tnum";
+    // font-variant-numeric: slashed-zero;
+}
+
+@mixin crop-line {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin crop-lines($lines: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* mixins effects */
+
+@mixin transition($property: all, $duration: 200ms, $timing: ease-in-out) {
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: $timing;
+}
+
+@mixin rounded($radius: space()) {
+    border-radius: $radius;
+    overflow: hidden;
+}
+
+@mixin box-shadow($color: rgba(0, 0, 0, 0.2)) {
+    box-shadow: 0 0 2px 2px $color;
+}
+
+@mixin text-shadow($color: rgba(0, 0, 0, 0.2)) {
+    text-shadow: 0 0 2px $color;
+}
+
+/* mixins ui */
+
+@mixin no-scrolling {
+    overflow: hidden;
+}
+
+@mixin no-select {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@mixin no-pointer-events {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+}
+
+@mixin pill {
+    @include rounded;
+    background-color: var(--color);
+    color: var(--background);
+    padding: space(s) space();
+    @include transition("color, background-color");
+}
+
+/* mixins spacing */
+
+@function space($size: m) {
+    $sizes: (xxs: 1px,
+        xs: 2px,
+        s: 4px,
+        m: 0.5rem,
+        l: 1rem,
+        xl: 2rem,
+        xxl: 4rem,
+        xxxl: 8rem,
+        xxxxl: 16rem,
+    );
+    @return map.get($sizes, $size );
+}
+
+@mixin padding($size: m, $side: all) {
+
+    $sides: top,
+    right,
+    bottom,
+    left;
+
+    @if list.index($sides, $side ) {
+        padding-#{$side}: space($size );
+    }
+
+    @else {
+        padding: space($size );
+    }
+}
+
+@mixin margin($size: m, $side: all) {
+
+    $sides: top,
+    right,
+    bottom,
+    left;
+
+    @if list.index($sides, $side ) {
+        margin-#{$side}: space($size );
+    }
+
+    @else {
+        margin: space($size );
+    }
+}
