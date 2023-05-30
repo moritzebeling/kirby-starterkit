@@ -26,7 +26,10 @@ sections:
     headline: Typografie
     theme: white
     text: |
-      Neuer Absatz mit Abstand oder Einrückung: (enter)
-      Neue Zeile ohne Abstand oder Einrückung: (shift+enter)
-      Gedankenstrich: – (alt+minus), immer umgeben von Leerzeichen
-      Genderform: Besser Studierende als Student:innen
+      Anführungszeichen (99) `„` `alt shift w` (66) `“` `alt 2`
+      Französische Anführungszeichen `»` `alt shift q` `«` `alt q`
+      Englische Anführungszeichen (66) `“` `alt 2` (99) `”` `alt shift 2`
+      Gedankenstrich `–` `alt -`
+      Neuer Absatz `enter`
+      Neue Zeile `shift enter`
+      Genderform: Studierende ist besser als Student:innen
