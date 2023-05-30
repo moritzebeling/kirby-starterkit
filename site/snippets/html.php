@@ -21,6 +21,9 @@
 
     <?php snippet('favicon') ?>
 
+    <?= css('assets/dist/index.css') ?>
+    <?= js('assets/dist/main.js',['defer' => true]) ?>
+
 </head>
 <body>
     <?= $slot ?>

@@ -1,0 +1,27 @@
+{
+  "name": "kirby-starterkit",
+  "version": "1.0.0",
+  "description": "Custom template for Kirby CMS",
+  "main": "assets/js/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moritzebeling/kirby-starterkit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moritzebeling/kirby-starterkit/issues"
+  },
+  "homepage": "https://github.com/moritzebeling/kirby-starterkit#readme",
+  "devDependencies": {
+    "sass": "^1.62.1",
+    "vite": "^4.3.9",
+    "vite-plugin-sass": "^0.1.0"
+  }
+}
