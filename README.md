@@ -12,7 +12,7 @@ npm install
 - Add `/content` to .gitignore
 - `git rm --cached content -r`
 
-3. Rename `site/config/config.localhost.php` to match your local hostname
+3. Rename `site/config/config.kirby-starterkit.test.php` to match your local hostname
 
 4. Clone [CSS boilerplate](https://github.com/moritzebeling/css-boilerplate)
 

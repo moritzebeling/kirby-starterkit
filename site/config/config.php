@@ -15,10 +15,12 @@ Str::$language = [
 
 return [
 
-	'locale' => 'en_GB.utf-8',
-
 	'debug' => false,
 	'whoops' => false,
+
+	'locale' => 'en_GB.utf-8',
+    'date.handler' => 'intl',
+    'smartypants' => true,
 
 	'cache' => [
 		'pages' => [
@@ -30,7 +32,7 @@ return [
         'favicon' => 'assets/favicon/favicon.png',
     ],
 
-	'smartypants' => true,
+    'languages.detect' => true,
 
 	'thumbs' => [
         // 'format' => 'webp',
