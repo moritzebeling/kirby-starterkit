@@ -4,7 +4,7 @@
   "description": "Custom template for Kirby CMS",
   "main": "assets/js/index.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite build --watch",
     "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
