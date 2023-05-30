@@ -19,3 +19,9 @@ npm install
 ```
 git clone git@github.com:moritzebeling/css-boilerplate.git assets/scss
 ```
+
+5. Start
+
+```
+npm run dev
+```

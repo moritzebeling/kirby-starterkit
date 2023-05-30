@@ -2,10 +2,10 @@
   "name": "kirby-starterkit",
   "version": "1.0.0",
   "description": "Custom template for Kirby CMS",
-  "main": "assets/js/index.js",
+  "main": "./index.js",
   "scripts": {
-    "dev": "vite build --watch",
-    "build": "vite build",
+    "dev": "npx mix watch",
+    "build": "npx mix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,8 +20,9 @@
   },
   "homepage": "https://github.com/moritzebeling/kirby-starterkit#readme",
   "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.62.1",
-    "vite": "^4.3.9",
-    "vite-plugin-sass": "^0.1.0"
+    "sass-loader": "^13.3.1"
   }
 }
