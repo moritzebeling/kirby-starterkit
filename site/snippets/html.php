@@ -33,9 +33,10 @@ use Kirby\Filesystem\F;
     <?php endif ?>
             
 </head>
-        
-<body>
-    »<?= $host ?>«
+
+<!-- Website by Moritz Ebeling https://moritzebeling.com -->
+
+<body data-template="<?= $page->template() ?>">
     <?= $slot ?>
 </body>
 

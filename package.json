@@ -5,6 +5,7 @@
   "main": "./index.js",
   "scripts": {
     "dev": "npx mix watch",
+    "hot": "npx mix watch --hot",
     "build": "npx mix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

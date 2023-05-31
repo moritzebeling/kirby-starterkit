@@ -14,10 +14,11 @@ npm install
 
 3. Rename `site/config/config.kirby-starterkit.test.php` to match your local hostname
 
-4. Clone [CSS boilerplate](https://github.com/moritzebeling/css-boilerplate)
+4. Download [CSS boilerplate](https://github.com/moritzebeling/css-boilerplate)
 
 ```
 git clone git@github.com:moritzebeling/css-boilerplate.git assets/scss
+rm -rf ./assets/scss/.git
 ```
 
 5. Start
