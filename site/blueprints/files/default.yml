@@ -1,19 +1,15 @@
-title: Image
+title: File
 
 fields:
 
-  title:
-    label: Alt-Text
+  alt:
+    label: field.blocks.image.alt
     type: text
-    width: 1/2
-    placeholder: '{{ file.filename }}'
+    placeholder: '{{ file.parent.title }} {{ file.filename }}'
+    icon: title
 
-  credits:
-    label: Credits
-    type: text
-    before: '©'
-    translate: false
-    width: 1/2
-
-  description:
-    type: text
+  caption:
+    label: field.blocks.image.caption
+    type: writer
+    icon: text
+    inline: true
