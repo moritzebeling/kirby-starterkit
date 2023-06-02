@@ -36,7 +36,7 @@ return [
 
 	'thumbs' => [
         // 'format' => 'webp',
-        'hardCropImagesInBlocks' => false,
+        'hardCropImagesInBlocks' => true,
         'autoOrient' => true,
         'quality' => 80,
         'presets' => [
