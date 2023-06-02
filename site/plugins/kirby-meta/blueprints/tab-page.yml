@@ -1,0 +1,57 @@
+label: Meta & SEO
+icon: search
+columns:
+
+  left:
+    width: 2/3
+    fields:
+
+      meta_title:
+        label: Page Title
+        type: text
+        placeholder: "{{ page.title }}"
+        help: Wird eingesetzt in {{ site.meta_title_schema.or( kirby.option('meta_title_schema') ) }}
+
+      meta_description:
+        label: Meta Description
+        type: textarea
+        maxlength: 200
+        buttons: false
+
+      meta_tags:
+        label: Meta Keywords
+        type: tags
+        options: query
+        query: site.index.pluck("meta_tags", ",", true)
+        max: 20
+
+      noindex:
+        label: Für Suchmaschinen verbergen
+        type: toggle
+        icon: hidden
+        width: 1/2
+        help: Robots noindex
+        text:
+          - Normal
+          - Verbergen
+
+      sitemap_priority:
+        type: range
+        label: Sitemap priority
+        width: 1/2
+        min: 0
+        max: 1
+        step: 0.1
+        default: 0.5
+
+  right:
+    width: 1/3
+    sections:
+
+      right_fields:
+        type: fields
+        fields:
+
+          preview_image: fields/meta/image
+
+      uploads: sections/files
