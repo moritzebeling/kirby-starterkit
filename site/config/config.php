@@ -36,6 +36,7 @@ return [
 
 	'thumbs' => [
         // 'format' => 'webp',
+        'hardCropImagesInBlocks' => false,
         'autoOrient' => true,
         'quality' => 80,
         'presets' => [
@@ -53,6 +54,20 @@ return [
                 '2000w' => ['width' => 2000],
                 '2600w' => ['width' => 2600],
             ]
+        ],
+        'sizes' => [ 480, 640, 1200, 2000, 2600 ],
+        'ratios' => [
+            '1/1',
+            '16/9',
+            '9/16',
+            '5/4',
+            '4/5',
+            '4/3',
+            '3/4',
+            '3/2',
+            '2/3',
+            '2/1',
+            '1/2',
         ]
     ],
 

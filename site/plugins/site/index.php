@@ -10,17 +10,21 @@ Kirby::plugin('moritzebeling/site', [
             return $this->content()->alt()->or( $this->parent() . ' ' . $this->filename() );
         },
         'img' => function ( $options = [] ) {
+
             $alt = in_array('alt', $options) ? $options['alt']->or( $this->alt() ) : $this->alt();
+            $sizes = option('thumbs.sizes',[ 480, 640, 1200, 2000, 2600 ]);
+            $thumb = $this->thumb([ 'width' => end( $sizes ) ]);
+
             return Html::img(
-                $this->thumb('xl')->url(),
+                $thumb->url(),
                 [
                     'alt' => $alt->esc(),
                     'class' => 'lazyload',
                     'data-sizes' => 'auto',
-                    'data-src' => $this->thumb('xl')->url(),
-                    'data-srcset' => $this->srcset(),
-                    'width' => $this->width(),
-                    'height' => $this->height(),
+                    'data-src' => $thumb->url(),
+                    'data-srcset' => $this->srcset($sizes),
+                    'width' => $thumb->width(),
+                    'height' => $thumb->height(),
                 ]
             );
         }

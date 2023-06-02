@@ -3,9 +3,9 @@
 use Kirby\Toolkit\Html;
 
 /** @var \Kirby\Cms\Block $block */
-$image = $block->image()->toFile();
+$images = $block->images()->toFiles();
 
-if (!$image) {
+if ($images->count() < 1) {
     return;
 }
 
@@ -43,28 +43,31 @@ if( $block->crop()->isTrue() && $block->ratio()->or('auto') != 'auto' ){
     }
 }
 
-$thumb = $image->thumb($resize);
-
 ?>
-<figure class="image" <?= $attr ?? '' ?>>
-    
-    <?= Html::img(
-        $thumb->url(),
-        [
-            'alt' => $block->alt()->or( $image->alt() )->esc(),
-            'class' => 'lazyload',
-            'data-sizes' => 'auto',
-            'data-src' => $thumb->url(),
-            'data-srcset' => $image->srcset($srcset),
-            'width' => $thumb->width(),
-            'height' => $thumb->height(),
-        ]
-    ); ?>
-
+<figure class="gallery">
+    <ul>
+        <?php foreach ($images as $image) : ?>
+            <li <?= $attr ?? '' ?>>
+                <?php
+                $thumb = $image->thumb($resize);
+                echo Html::img(
+                    $thumb->url(),
+                    [
+                        'alt' => $block->alt()->or( $image->alt() )->esc(),
+                        'class' => 'lazyload',
+                        'data-sizes' => 'auto',
+                        'data-src' => $thumb->url(),
+                        'data-srcset' => $image->srcset($srcset),
+                        'width' => $thumb->width(),
+                        'height' => $thumb->height(),
+                    ]
+                ); ?>
+            </li>
+        <?php endforeach ?>
+    </ul>
     <?php if ($block->caption()->isNotEmpty()) : ?>
         <figcaption>
             <?= $block->caption() ?>
         </figcaption>
     <?php endif ?>
-
 </figure>

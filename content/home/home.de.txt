@@ -2,4 +2,8 @@ Title: Home
 
 ----
 
+Blocks: [{"content":{"images":["file://Mv4U7XQsdiDebD6k"],"caption":"","ratio":"16/9","crop":"true"},"id":"a576248e-26dc-4592-b1cb-4fa674b01e0f","isHidden":false,"type":"gallery"}]
+
+----
+
 Uuid: cEDHCUoO19neh8hI
