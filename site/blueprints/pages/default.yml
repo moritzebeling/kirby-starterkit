@@ -1,14 +1,25 @@
 title: Default page
 icon: page
 
-preset: page
+tabs:
 
-pages:
-  extends: sections/pages
+  page:
+    icon: page
+    columns:
 
-files:
-  extends: sections/files
+      - width: 2/3
+        fields:
 
-fields:
-  blocks:
-    extends: fields/blocks
+          blocks:
+            extends: fields/blocks
+
+      - width: 1/3
+        sections:
+          
+          pages:
+            extends: sections/pages
+
+          files:
+            extends: sections/files
+
+  meta: tabs/meta/page

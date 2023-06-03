@@ -56,4 +56,5 @@ tabs:
           links:
             extends: fields/links
 
+  meta: tabs/meta/site
   help: tabs/help
