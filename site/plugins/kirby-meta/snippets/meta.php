@@ -1,28 +1,29 @@
 <?php
 
-$meta = $page->meta();
+$site_meta = $site->meta();
+$page_meta = $page->meta();
 
 ?>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title><?= $meta->title() ?></title>
+<title><?= $page_meta->title() ?></title>
 
-<?php if( option('debug', false) || $page->noindex()->isTrue() ): ?>
+<?php if( option('debug', false) || $page_meta->noindex()->isTrue() ): ?>
     <meta name="robots" content="noindex">
 <?php endif ?>
 
 <link rel="canonical" href="<?= $page->url() ?>" />
-<meta name="description" content="<?= $meta->description() ?>">
-<meta name="keywords" content="<?= $meta->keywords() ?>">
+<meta name="description" content="<?= $page_meta->description() ?>">
+<meta name="keywords" content="<?= $page_meta->keywords() ?>">
 
-<meta property="og:title" content="<?= $meta->title() ?>">
-<meta property="og:description" content="<?= $meta->description() ?>">
+<meta property="og:title" content="<?= $page_meta->title() ?>">
+<meta property="og:description" content="<?= $page_meta->description() ?>">
 <meta property="og:url" content="<?= $page->url() ?>">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="<?= $site->title() ?>">
+<meta property="og:site_name" content="<?= $site_meta->title() ?>">
 <meta property="og:locale" content="<?= (string)$kirby->language()->locale()[0] ?>">
 
-<?php if( $image = $meta->image()->toFile() ):
+<?php if( $image = $page_meta->image()->toFile() ):
     $image = $image->thumb(option('moritzebeling.kirby-meta.preview_image.resize'))->url();
     ?>
     <meta property="og:image" content="<?= $image ?>">

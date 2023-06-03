@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db2698bf21f69989feb835c34d316dd0",
+    "content-hash": "2acf7f4733ebfbd8d782844314a9446a",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -625,6 +625,61 @@
                 "source": "https://github.com/moritzebeling/kirby-favicon"
             },
             "time": "2023-03-02T12:37:25+00:00"
+        },
+        {
+            "name": "moritzebeling/kirby-meta",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moritzebeling/kirby-meta.git",
+                "reference": "1355fed0a1e3f6b11fa8be42de0dc9455ce731c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moritzebeling/kirby-meta/zipball/1355fed0a1e3f6b11fa8be42de0dc9455ce731c5",
+                "reference": "1355fed0a1e3f6b11fa8be42de0dc9455ce731c5",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1",
+                "php": ">=7.4.0"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moritz Ebeling",
+                    "homepage": "https://moritzebeling.com"
+                }
+            ],
+            "description": "Kirby plugin to streamline meta and seo information",
+            "homepage": "https://github.com/moritzebeling/kirby-meta",
+            "keywords": [
+                "html",
+                "kirby",
+                "kirby-cms",
+                "kirby-plugin",
+                "meta",
+                "open-graph",
+                "php",
+                "plugin",
+                "seo"
+            ],
+            "support": {
+                "docs": "https://github.com/moritzebeling/kirby-meta",
+                "issues": "https://github.com/moritzebeling/kirby-meta/issues",
+                "source": "https://github.com/moritzebeling/kirby-meta"
+            },
+            "funding": [
+                {
+                    "url": "http://more.moritzebeling.com/support",
+                    "type": "paypal"
+                }
+            ],
+            "time": "2023-03-03T00:00:00+00:00"
         },
         {
             "name": "phpmailer/phpmailer",

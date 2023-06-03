@@ -1,0 +1,49 @@
+label: Meta & SEO
+type: object
+fields:
+
+  title:
+    label: Page Title
+    type: text
+    placeholder: "{{ page.title }}"
+    help: "{{ page.meta.title }}"
+
+  description:
+    label: Meta Description
+    type: textarea
+    placeholder: "{{ page.meta.description }}"
+    maxlength: 200
+    buttons: false
+
+  keywords:
+    label: Meta Keywords
+    type: tags
+    help: "{{ page.meta.keywords }}"
+    max: 20
+
+  image:
+    type: files
+    label: OpenGraph Image
+    image:
+      cover: false
+      back: '#f9f9f9'
+    help: Cropped to 1200 × 630 px
+
+  noindex:
+    label: Für Suchmaschinen verbergen
+    type: toggle
+    icon: hidden
+    width: 1/2
+    help: Robots noindex
+    text:
+      - Normal
+      - Verbergen
+
+  sitemap_priority:
+    type: range
+    label: Sitemap priority
+    width: 1/2
+    min: 0
+    max: 1
+    step: 0.1
+    default: 0.5

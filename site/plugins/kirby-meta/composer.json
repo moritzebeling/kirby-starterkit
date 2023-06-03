@@ -1,0 +1,41 @@
+{
+    "name": "moritzebeling/kirby-meta",
+    "description": "Kirby plugin to streamline meta and seo information",
+    "version": "1.0.0",
+    "type": "kirby-plugin",
+    "homepage": "https://github.com/moritzebeling/kirby-meta",
+    "time": "2023-03-03",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moritz Ebeling",
+            "homepage": "https://moritzebeling.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/moritzebeling/kirby-meta/issues",
+        "source": "https://github.com/moritzebeling/kirby-meta",
+        "docs": "https://github.com/moritzebeling/kirby-meta"
+    },
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "http://more.moritzebeling.com/support"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "getkirby/composer-installer": "^1.1"
+    },
+    "keywords": [
+        "php",
+        "kirby",
+        "plugin",
+        "kirby-plugin",
+        "kirby-cms",
+        "meta",
+        "seo",
+        "open-graph",
+        "html"
+    ]
+}

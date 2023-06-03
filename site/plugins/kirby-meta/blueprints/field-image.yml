@@ -1,7 +1,0 @@
-type: files
-query: site.files
-label: OpenGraph Image
-image:
-  cover: false
-  back: '#f9f9f9'
-help: Cropped to 1200 × 630 px

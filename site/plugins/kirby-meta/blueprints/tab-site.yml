@@ -10,29 +10,17 @@ columns:
         label: Page Title Schema
         type: text
         placeholder: "{{ kirby.option('moritzebeling.kirby-meta.title_schema') }}"
-        help: '{site} Name der Website, {page} Titel der jeweiligen Unterseite'
+        help: 'Ersetzungen: {site} Name der Website, {page} Titel der jeweiligen Unterseite'
 
-      meta_description:
-        label: Meta Description
-        type: textarea
-        maxlength: 200
-        buttons: false
-
-      meta_tags:
-        label: Meta Keywords
-        type: tags
-        options: query
-        query: site.index.pluck("meta_tags", ",", true)
-        max: 20
+      meta:
+        extends: fields/meta/meta
+        fields:
+          title:
+            placeholder: "{{ site.title }}"
+            help: false
 
   right:
     width: 1/3
     sections:
-
-      right_fields:
-        type: fields
-        fields:
-
-          preview_image: fields/meta/image
 
       uploads: sections/files

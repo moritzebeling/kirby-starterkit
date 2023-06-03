@@ -28,7 +28,8 @@
         "php": ">=8.0.0 <8.3.0",
         "getkirby/cms": "^3.9",
         "moritzebeling/kirby-cachebusting": "^2.0",
-        "moritzebeling/kirby-favicon": "^1.0"
+        "moritzebeling/kirby-favicon": "^1.0",
+        "moritzebeling/kirby-meta": "^1.0"
     },
     "config": {
         "allow-plugins": {

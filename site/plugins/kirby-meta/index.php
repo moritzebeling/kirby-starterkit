@@ -3,7 +3,6 @@
 use Kirby\Cms\App as Kirby;
 use Kirby\Cms\Response;
 use Kirby\Cms\Html;
-use Kirby\Cms\Content;
 use Kirby\Toolkit\Str;
 
 function jsonld( array $data ){
@@ -30,7 +29,7 @@ Kirby::plugin('moritzebeling/kirby-meta', [
     ],
 
     'blueprints' => [
-        'fields/meta/image' => __DIR__ . '/blueprints/field-image.yml',
+        'fields/meta/meta' => __DIR__ . '/blueprints/field-meta.yml',
         'tabs/meta/page' => __DIR__ . '/blueprints/tab-page.yml',
         'tabs/meta/site' => __DIR__ . '/blueprints/tab-site.yml',
     ],
@@ -42,30 +41,36 @@ Kirby::plugin('moritzebeling/kirby-meta', [
     ],
 
     'siteMethods' => [
-        'meta' => function (): Content {
-            return new Content([
-                'title' => (string)$this->title(),
-                'description' => (string)$this->meta_description(),
-                'keywords' => (string)$this->meta_tags(),
-                'image' => (string)$this->preview_image(),
-            ], $this);
+        'meta' => function () {
+            $site_meta = $this->content()->meta()->toObject();
+            if( $site_meta->title()->isEmpty() ){
+                $site_meta->update([
+                    'title' => (string)$this->title(),
+                ]);
+            }
+            return $site_meta;
         },
         'schema' => function (): array {
+
             $meta = $this->meta();
+
             $thumbnail = asset( option('moritzebeling.kirby-favicon.favicon.png') );
+
             if( $image = $meta->image()->toFile() ){
                 $image = $image->thumb(option('moritzebeling.kirby-meta.preview_image.resize'))->url();
             }
+
             return [
                 '@context' => 'https://schema.org',
                 '@type' => 'WebSite',
                 '@id' => $this->url(),
+                'alternateName' => (string)$this->title(),
                 'copyrightYear' => date('Y'),
                 'description' => (string)$meta->description()->escape(),
                 'image' => $image,
                 'inLanguage' => $this->kirby()->languages()->pluck('code'),
                 'keywords' => $meta->keywords()->split(),
-                'name' => (string)$this->title(),
+                'name' => (string)$meta->title(),
                 'sameAs' => array_map(function($field){
                     return (string)$field;
                 },$this->links()->toStructure()->pluck('url')),
@@ -75,28 +80,32 @@ Kirby::plugin('moritzebeling/kirby-meta', [
         },
     ],
     'pageMethods' => [
-        'meta' => function (): Content {
-            
-            $title = $this->site()->meta_title_schema()->or( option('moritzebeling.kirby-meta.title_schema','{page} | {site}') );
-            $title = str_replace( '{site}', $this->site()->title(), $title );
-            $title = str_replace( '{page}', $this->meta_title()->or( $this->title() ), $title );
+        'meta' => function () {
 
-            $description = (string)$this->meta_description()->or( $this->site()->meta_description() );
+            $page_meta = $this->content()->meta()->toObject();
+            $site_meta = $this->site()->meta();
+                        
+            $title = $this->site()->meta_title_schema()->or( option('moritzebeling.kirby-meta.title_schema','{page} | {site}') );
+            $title = str_replace( '{site}', $site_meta->title(), $title );
+            $title = str_replace( '{page}', $page_meta->title()->or( $this->title() ), $title );
+
+            $description = $page_meta->description()->or( $site_meta->description() );
 
             $keywords = array_slice(array_unique( array_merge(
-                $this->meta_tags()->split(),
-                $this->site()->meta_tags()->split()
+                $page_meta->keywords()->split(),
+                $site_meta->keywords()->split()
             )),0,20);
 
-            $image = $this->preview_image()->or( $this->site()->preview_image() );
+            $image = $page_meta->image()->or( $site_meta->image() )->value();
 
-            return new Content([
-                'title' => (string)$title,
+            $page_meta->update([
+                'title' => $title,
                 'description' => (string)$description,
                 'keywords' => implode(',',$keywords),
-                'image' => (string)$image,   
-            ], $this);
+                'image' => $image,
+            ]);
 
+            return $page_meta;
         },
         'schema' => function (): array {
             $meta = $this->meta();
@@ -122,7 +131,7 @@ Kirby::plugin('moritzebeling/kirby-meta', [
                 '@type' => 'WebPage',
                 '@id' => $this->site()->url() . '/' . $this->id(),
                 'about' => $about,
-                'alternateName' => (string)$meta->title(),
+                'alternateName' => (string)$this->title(),
                 'copyrightYear' => date('Y'),
                 'dateModified' => $this->modified('c', 'date'),
                 'description' => (string)$meta->description()->escape(),
@@ -133,7 +142,7 @@ Kirby::plugin('moritzebeling/kirby-meta', [
                     '@type' => 'WebSite',
                     '@id' => $this->site()->url(),
                 ],
-                'name' => (string)$this->title(),
+                'name' => (string)$meta->title(),
                 'primaryImageOfPage' => $primaryImageOfPage,
                 'url' => $this->url(),
             ];
