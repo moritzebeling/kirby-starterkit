@@ -1,11 +1,12 @@
-# Kirby Favicon
+# Kirby Favicon Plugin
 
 This plugin will solve all your favicon worries :)
 
 ## Installation
 
-```
+```bash
 composer require moritzebeling/kirby-favicon
+composer update moritzebeling/kirby-favicon
 ```
 
 Or download/clone this repo into `site/plugins` of your Kirby project.
@@ -25,15 +26,12 @@ The icon should be square, min `180x180px`, but why don’t you just do `1024x10
 <?php snippet('favicon') ?>
 ```
 
-Usually, the `png` will be used as an app icon (eg. when you save the website as an app icon to your home screen), so I would recommend to not use transparency and add a little more space around the symbol. The `svg` will then be used by modern browsers for showing it in the tab bar, so transparency is fine and you can use the entire space as it will be shown quite small.
-
-For further control you could also add specific app icons for Apple, Android and Windows, and control all the sizes that are generated. Just have a look at the available options below.
-
+If you want to use transparency in your favicon, you should additionally add an app icon.
 The mask icon will be used in the MacBook Pro Touch Bar, so it should be simple and with transparent background.
 
 If your website has a changing background color, you should set `color` to false, otherwise I recommend to set it to you primary background color.
 
-## 🤓 Options
+## 🤓 Full configuration
 
 ```php
 return [
@@ -49,7 +47,7 @@ return [
             'sizes' => [ 180, 167, 152 ]
         ],
         'mask' => 'assets/favicon/mask.svg', // fallback to favicon.svg
-        'color' => '#000000',
+        'color' => '#ffffff',
         
         // for minimal html output
         'minimalist' => false,
@@ -59,7 +57,7 @@ return [
 
         'manifest' => [
             'icon' => 'assets/favicon/android-icon.png', // fallback to favicon.png
-            'background_color' => '#000000',
+            'background_color' => '#ffffff',
             'sizes' => [
                 36 => 0.75,
                 48 => 1.0,
@@ -131,10 +129,28 @@ When `extended` option is `true`, the following is added:
 <meta name="msapplication-TileImage" content="/media/.../favicon-144x.png">
 ```
 
+## Panel Favicon
+
+https://getkirby.com/docs/reference/system/options/panel#custom-panel-favicon
+
 ## Research
 
-To decide on a solution that fits all or most cases, I looked at many existing favicon generators and read the Mozilla docs. You can have a look at my reasearch at the repo wiki: https://github.com/moritzebeling/kirby-favicon/wiki
+This solution is an intersection of what many existing Favion generators provide. You can have a look on my research in the repo wiki: https://github.com/moritzebeling/kirby-favicon/wiki
 
 ## Development
 
-This plugin is work in progress and I don’t provide any warranty. Use at your own risk. If you have any ideas for further developments or stumble upon any problems, please open an issue or PR. Thank you!
+1. Install a fresh Kirby StarterKit
+2. `cd site/plugins`
+3. `git clone` this repo
+
+Roadmap
+- [ ] Make favicon changable from panel
+
+## ☕️ Support
+
+If you like this plugin, I would be glad if you would invite me for a coffee via [PayPal](http://more.moritzebeling.com/support)
+If you have any ideas for further development or stumble upon any problems, please open an issue or PR. Thank you!
+
+## Warranty
+
+This plugin is work in progress and comes without any warranty. Use at your own risk.

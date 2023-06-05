@@ -538,20 +538,21 @@
         },
         {
             "name": "moritzebeling/kirby-cachebusting",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moritzebeling/kirby-cachebusting.git",
-                "reference": "b7966bbc9953df20ed42dc57678b500793167b9a"
+                "reference": "67b6fbd4531b97f2cdc35510d1c7cae15ca0ad8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moritzebeling/kirby-cachebusting/zipball/b7966bbc9953df20ed42dc57678b500793167b9a",
-                "reference": "b7966bbc9953df20ed42dc57678b500793167b9a",
+                "url": "https://api.github.com/repos/moritzebeling/kirby-cachebusting/zipball/67b6fbd4531b97f2cdc35510d1c7cae15ca0ad8a",
+                "reference": "67b6fbd4531b97f2cdc35510d1c7cae15ca0ad8a",
                 "shasum": ""
             },
             "require": {
-                "getkirby/composer-installer": "^1.1"
+                "getkirby/composer-installer": "^1.1",
+                "php": ">=7.4.0"
             },
             "type": "kirby-plugin",
             "notification-url": "https://packagist.org/downloads/",
@@ -561,7 +562,7 @@
             "authors": [
                 {
                     "name": "Moritz Ebeling",
-                    "homepage": "https://github.com/moritzebeling"
+                    "homepage": "https://moritzebeling.com"
                 },
                 {
                     "name": "Kirby Team",
@@ -571,24 +572,37 @@
             ],
             "description": "Kirby Cachebusting plugin",
             "homepage": "https://github.com/moritzebeling/kirby-cachebusting",
+            "keywords": [
+                "assets",
+                "cache",
+                "cachebusting",
+                "flush",
+                "kirby",
+                "kirby-cms",
+                "kirby-plugin",
+                "php",
+                "plugin",
+                "static"
+            ],
             "support": {
+                "docs": "https://github.com/moritzebeling/kirby-cachebusting",
                 "issues": "https://github.com/moritzebeling/kirby-cachebusting/issues",
-                "source": "https://github.com/moritzebeling/kirby-cachebusting/tree/v2.0.0"
+                "source": "https://github.com/moritzebeling/kirby-cachebusting"
             },
-            "time": "2023-01-22T13:29:47+00:00"
+            "time": "2023-06-02T00:00:00+00:00"
         },
         {
             "name": "moritzebeling/kirby-favicon",
-            "version": "v1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moritzebeling/kirby-favicon.git",
-                "reference": "2a5e85cb9471a93e3c23cc594fbf388e160d5750"
+                "reference": "887b559aec5b80773877285649693ffdab8f3f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moritzebeling/kirby-favicon/zipball/2a5e85cb9471a93e3c23cc594fbf388e160d5750",
-                "reference": "2a5e85cb9471a93e3c23cc594fbf388e160d5750",
+                "url": "https://api.github.com/repos/moritzebeling/kirby-favicon/zipball/887b559aec5b80773877285649693ffdab8f3f11",
+                "reference": "887b559aec5b80773877285649693ffdab8f3f11",
                 "shasum": ""
             },
             "require": {
@@ -609,35 +623,47 @@
             "description": "Kirby plugin to meet all favicon needs",
             "homepage": "https://github.com/moritzebeling/kirby-favicon",
             "keywords": [
+                "app-icon",
                 "apple-touch-icon",
                 "browserconfig.xml",
                 "favicon",
                 "icon",
                 "kirby",
+                "kirby-cms",
+                "kirby-plugin",
                 "logo",
                 "manifest.json",
                 "meta",
+                "php",
                 "plugin",
                 "seo"
             ],
             "support": {
+                "docs": "https://github.com/moritzebeling/kirby-favicon",
                 "issues": "https://github.com/moritzebeling/kirby-favicon/issues",
-                "source": "https://github.com/moritzebeling/kirby-favicon"
+                "source": "https://github.com/moritzebeling/kirby-favicon",
+                "wiki": "https://github.com/moritzebeling/kirby-favicon/wiki"
             },
-            "time": "2023-03-02T12:37:25+00:00"
+            "funding": [
+                {
+                    "url": "http://more.moritzebeling.com/support",
+                    "type": "paypal"
+                }
+            ],
+            "time": "2023-03-02T00:00:00+00:00"
         },
         {
             "name": "moritzebeling/kirby-meta",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moritzebeling/kirby-meta.git",
-                "reference": "1355fed0a1e3f6b11fa8be42de0dc9455ce731c5"
+                "reference": "f85cd58989c2b34296348dda3c76072f2c259d76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moritzebeling/kirby-meta/zipball/1355fed0a1e3f6b11fa8be42de0dc9455ce731c5",
-                "reference": "1355fed0a1e3f6b11fa8be42de0dc9455ce731c5",
+                "url": "https://api.github.com/repos/moritzebeling/kirby-meta/zipball/f85cd58989c2b34296348dda3c76072f2c259d76",
+                "reference": "f85cd58989c2b34296348dda3c76072f2c259d76",
                 "shasum": ""
             },
             "require": {
@@ -813,16 +839,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.2.1",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e"
+                "reference": "7c3aff79d10325257a001fcf92d991f24fc967cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
-                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/7c3aff79d10325257a001fcf92d991f24fc967cf",
+                "reference": "7c3aff79d10325257a001fcf92d991f24fc967cf",
                 "shasum": ""
             },
             "require": {
@@ -831,7 +857,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.3-dev"
+                    "dev-main": "3.4-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -860,7 +886,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.2.1"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.3.0"
             },
             "funding": [
                 {
@@ -876,7 +902,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-01T10:25:55+00:00"
+            "time": "2023-05-23T14:45:45+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

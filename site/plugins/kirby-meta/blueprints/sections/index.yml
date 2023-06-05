@@ -1,0 +1,32 @@
+extends: sections/pages
+headline: All pages
+type: pages
+layout: table
+search: true
+columns:
+
+  meta_title:
+    label: Meta Title
+    value: "{{ page.meta.title }}"
+    
+  slug:
+    label: Slug
+    value: "{{ page.id }}"
+    mobile: false
+  
+  description:
+    label: Description
+    value: "{{ page.meta.description }}"
+  
+  keywords:
+    label: Keywords
+    value: "{{ page.meta.keywords }}"
+    mobile: false
+    type: tags
+
+  priority:
+    label: Priority
+    value: "{{ page.meta.priority }}"
+    after: '%'
+    mobile: false
+    width: 1/14

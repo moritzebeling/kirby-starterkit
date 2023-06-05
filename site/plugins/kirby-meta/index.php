@@ -22,6 +22,7 @@ Kirby::plugin('moritzebeling/kirby-meta', [
             'height' => 630,
             'crop' => true,
         ],
+        
         // page-id
         // /^page-id$/
         // /parent\/.*/
@@ -29,9 +30,11 @@ Kirby::plugin('moritzebeling/kirby-meta', [
     ],
 
     'blueprints' => [
-        'fields/meta/meta' => __DIR__ . '/blueprints/field-meta.yml',
-        'tabs/meta/page' => __DIR__ . '/blueprints/tab-page.yml',
-        'tabs/meta/site' => __DIR__ . '/blueprints/tab-site.yml',
+        'fields/meta/meta' => __DIR__ . '/blueprints/fields/meta.yml',
+        'sections/meta/index' => __DIR__ . '/blueprints/sections/index.yml',
+        'tabs/meta/page' => __DIR__ . '/blueprints/tabs/page.yml',
+        'tabs/meta/site' => __DIR__ . '/blueprints/tabs/site.yml',
+        'tabs/meta/index' => __DIR__ . '/blueprints/tabs/index.yml',
     ],
 
     'snippets' => [
@@ -98,11 +101,28 @@ Kirby::plugin('moritzebeling/kirby-meta', [
 
             $image = $page_meta->image()->or( $site_meta->image() )->value();
 
+            if( $page_meta->priority()->isEmpty() ){
+                if( $this->isHomePage() ){
+                    $priority = 100;
+                } else if( $this->isErrorPage() ){
+                    $priority = 0;
+                } else if( $this->depth() > 1 ) {
+                    $degrade = $this->isListed() ? 0.8 : 0.2;
+                    $priority = (int)$this->parent()->meta()->priority()->value() * $degrade;
+                    $priority = round($priority / 5) * 5;
+                } else {
+                    $priority = $this->isListed() ? 80 : 20;
+                }
+            } else {
+                $priority = (int)$page_meta->priority();
+            }
+
             $page_meta->update([
                 'title' => $title,
                 'description' => (string)$description,
                 'keywords' => implode(',',$keywords),
                 'image' => $image,
+                'priority' => $priority,
             ]);
 
             return $page_meta;

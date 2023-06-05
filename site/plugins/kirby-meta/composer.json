@@ -1,7 +1,7 @@
 {
     "name": "moritzebeling/kirby-meta",
     "description": "Kirby plugin to streamline meta and seo information",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "kirby-plugin",
     "homepage": "https://github.com/moritzebeling/kirby-meta",
     "time": "2023-03-03",

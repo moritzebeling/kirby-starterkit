@@ -2,8 +2,8 @@ label: Meta & SEO
 icon: search
 columns:
 
-  left:
-    width: 2/3
+  top:
+    width: 1/1
     fields:
 
       meta_title_schema:
@@ -12,15 +12,28 @@ columns:
         placeholder: "{{ kirby.option('moritzebeling.kirby-meta.title_schema') }}"
         help: 'Ersetzungen: {site} Name der Website, {page} Titel der jeweiligen Unterseite'
 
+  left:
+    width: 2/3
+    fields:
+
       meta:
         extends: fields/meta/meta
         fields:
           title:
             placeholder: "{{ site.title }}"
             help: false
+          priority: false
 
   right:
     width: 1/3
     sections:
 
-      uploads: sections/files
+      files: sections/files
+
+  bottom:
+    width: 1/1
+    sections:
+
+      metaIndex:
+        extends: sections/meta/index
+        query: site.index

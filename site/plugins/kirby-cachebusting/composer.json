@@ -1,25 +1,41 @@
 {
     "name": "moritzebeling/kirby-cachebusting",
     "description": "Kirby Cachebusting plugin",
-    "license": "MIT",
+    "version": "2.0.1",
     "type": "kirby-plugin",
-    "version": "2.0.0",
     "homepage": "https://github.com/moritzebeling/kirby-cachebusting",
+    "time": "2023-06-02",
+    "license": "MIT",
     "authors": [
         {
             "name": "Moritz Ebeling",
-            "homepage": "https://github.com/moritzebeling"
+            "homepage": "https://moritzebeling.com"
         },
         {
-			"name": "Kirby Team",
-			"email": "support@getkirby.com",
-			"homepage": "https://getkirby.com"
-		}
+            "name": "Kirby Team",
+            "email": "support@getkirby.com",
+            "homepage": "https://getkirby.com"
+        }
     ],
+    "support": {
+        "issues": "https://github.com/moritzebeling/kirby-cachebusting/issues",
+        "source": "https://github.com/moritzebeling/kirby-cachebusting",
+        "docs": "https://github.com/moritzebeling/kirby-cachebusting"
+    },
     "require": {
+        "php": ">=7.4.0",
         "getkirby/composer-installer": "^1.1"
     },
-    "support": {
-        "issues": "https://github.com/moritzebeling/kirby-cachebusting/issues"
-    }
+    "keywords": [
+        "php",
+        "kirby",
+        "plugin",
+        "kirby-plugin",
+        "kirby-cms",
+        "cache",
+        "cachebusting",
+        "flush",
+        "static",
+        "assets"
+    ]
 }

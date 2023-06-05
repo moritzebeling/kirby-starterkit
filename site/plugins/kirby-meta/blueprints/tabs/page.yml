@@ -12,4 +12,4 @@ columns:
     width: 1/3
     sections:
 
-      uploads: sections/files
+      files: sections/files

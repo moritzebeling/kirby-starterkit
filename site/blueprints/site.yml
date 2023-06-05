@@ -35,8 +35,9 @@ tabs:
             type: object
             fields:
 
-              company:
+              title:
                 type: text
+                label: Legal name
               address:
                 type: writer
                 inline: true

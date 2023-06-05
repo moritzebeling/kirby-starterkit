@@ -2,5 +2,8 @@
 
 ## ToDo
 
-- Meta data for files (alt text, option to include in sitemap)
+- Meta data for files (alt text, jsonld)
 - Check in One-Language-Setup
+- Write Readme
+- Sitemap as json
+- include media in sitemap

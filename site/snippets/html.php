@@ -15,10 +15,10 @@ use Kirby\Filesystem\F;
     <?php snippet('favicon') ?>
 
     <?php if ($host = F::read('assets/dist/hot')) : ?>
-        <?= js( $host . '/index.js') ?>
+        <?= js( $host . '/index.js',['defer'=>true]) ?>
         <?= css( $host . '/global.css') ?>
     <?php else : ?>
-        <?= js('assets/dist/index.js') ?>
+        <?= js('assets/dist/index.js',['defer'=>true]) ?>
         <?= css('assets/dist/global.css') ?>
     <?php endif ?>
             

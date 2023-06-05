@@ -7,10 +7,7 @@
         <url>
             <loc><?= html($page->url()) ?></loc>
             <lastmod><?= $page->modified('c', 'date') ?></lastmod>
-            <?php $priority = $page->sitemap_priority()->or(
-                $page->isHomePage() ? 1 : number_format(0.5 / $page->depth(), 1)
-            ); ?>
-            <priority><?= $priority ?></priority>
+            <priority><?= $page->meta()->priority()->toInt() / 100 ?></priority>
             
             <?php foreach ($page->kirby()->languages() as $language): ?>
                 <xhtml:link rel="alternate" hreflang="<?= $language->code() ?>" href="<?= $page->url($language->code()) ?>" />
