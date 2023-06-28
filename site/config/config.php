@@ -18,21 +18,14 @@ return [
 	'debug' => false,
 	'whoops' => false,
 
-	'locale' => 'en_GB.utf-8',
+	'cache.pages.active' => false,
+
+    'languages.detect' => false,
+    'locale' => 'en_GB.utf-8',
     'date.handler' => 'intl',
+
     'smartypants' => true,
-
-	'cache' => [
-		'pages' => [
-			'active' => false
-		],
-	],
-
-    'panel' => [
-        'favicon' => 'assets/favicon/favicon.png',
-    ],
-
-    'languages.detect' => true,
+    'panel.favicon' => 'assets/favicon/favicon.png',
 
 	'thumbs' => [
         // 'format' => 'webp',

@@ -3,8 +3,10 @@
 use Kirby\Data\Yaml;
 use Kirby\Filesystem\F;
 
+$code = 'de';
+
 return [
-    'code' => 'de',
+    'code' => $code,
     'name' => 'Deutsch',
     'default' => true,
     'url' => '/',
@@ -12,5 +14,5 @@ return [
     'locale' => [
         'LC_ALL' => 'de_DE'
     ],
-    'translations' => Yaml::decode(F::read(dirname(__DIR__) . '/translations/de.yml')),
+    'translations' => Yaml::decode(F::read(dirname(__DIR__) . "/translations/$code.yml")),
 ];
