@@ -45,8 +45,10 @@ if( $block->crop()->isTrue() && $block->ratio()->or('auto') != 'auto' ){
 
 $thumb = $image->thumb($resize);
 
+$caption = $block->caption()->or( $image->caption() );
+
 ?>
-<figure class="image" <?= $attr ?? '' ?>>
+<figure class="block image" <?= $attr ?? '' ?>>
     
     <?= Html::img(
         $thumb->url(),
@@ -61,9 +63,9 @@ $thumb = $image->thumb($resize);
         ]
     ); ?>
 
-    <?php if ($block->caption()->isNotEmpty()) : ?>
+    <?php if ($caption->isNotEmpty()) : ?>
         <figcaption>
-            <?= $block->caption() ?>
+            <?= $caption->caption() ?>
         </figcaption>
     <?php endif ?>
 

@@ -44,7 +44,7 @@ if( $block->crop()->isTrue() && $block->ratio()->or('auto') != 'auto' ){
 }
 
 ?>
-<figure class="gallery">
+<figure class="block gallery">
     <ul>
         <?php foreach ($images as $image) : ?>
             <li <?= $attr ?? '' ?>>
@@ -62,6 +62,11 @@ if( $block->crop()->isTrue() && $block->ratio()->or('auto') != 'auto' ){
                         'height' => $thumb->height(),
                     ]
                 ); ?>
+                <?php if ($block->caption()->isEmpty() && $image->caption()->isNotEmpty() ) : ?>
+                    <figcaption>
+                        <?= $image->caption() ?>
+                    </figcaption>
+                <?php endif ?>
             </li>
         <?php endforeach ?>
     </ul>
